@@ -6,3 +6,4 @@ node_modules/
 public/*.html
 public/sitemap.xml
 public/robots.txt
+.env

@@ -867,6 +867,292 @@
     }
   }
 
+
+  /* ---------- Entrar / crear cuenta / recuperar: Amizoo se posa en la tarjeta y acompaña el formulario ----------
+     Mira lo que escribes, se tapa los ojos con el ala en la contraseña, se ríe al darle "Ver",
+     niega con la cabeza si hay error y celebra (y sale volando) al entrar.
+     cuenta.js llama a window.AmizooAcceso.{pensando, error, exito}. */
+  const cajaAcceso = document.querySelector('.acceso__caja');
+  if (cajaAcceso) {
+    raiz.hidden = true; // en estas pantallas el guía es el que está posado en la tarjeta
+    const seccion = cajaAcceso.closest('.acceso');
+    const nodo = document.createElement('div');
+    nodo.className = 'acceso-ave';
+    nodo.innerHTML = `
+      <p class="acceso-ave__globo" role="status" aria-live="polite"></p>
+      <button type="button" class="acceso-ave__boton" aria-label="Amizoo: ¿qué hago aquí?">
+        <span class="acceso-ave__vuelo"><span class="acceso-ave__dibujo">${aveSVG()}</span></span>
+      </button>`;
+    cajaAcceso.classList.add('acceso__caja--ave');
+    cajaAcceso.prepend(nodo);
+    const globoA = nodo.querySelector('.acceso-ave__globo');
+    const botonA = nodo.querySelector('.acceso-ave__boton');
+    const vuelo = nodo.querySelector('.acceso-ave__vuelo');
+    const dibujo = nodo.querySelector('.acceso-ave__dibujo');
+    const aveA = vida(dibujo);
+    const ojo = dibujo.querySelector('.ave-ojo');
+    const ala = dibujo.querySelector('.ave-ala');
+    const todoA = dibujo.querySelector('.ave-todo');
+    const ayuda = seccion?.dataset.guia || 'Llena los datos y toca el botón amarillo.';
+
+    // Globo con texto que se escribe solo
+    let tecleo = null;
+    let ultimo = '';
+    const decirA = (t, { forzar = false } = {}) => {
+      if (t === ultimo && !forzar) return;
+      ultimo = t;
+      clearInterval(tecleo);
+      globoA.classList.add('visible');
+      if (!animar) { globoA.textContent = t; return; }
+      A.remove(globoA);
+      A({ targets: globoA, scale: [0.85, 1], opacity: [0, 1], duration: 380, easing: 'easeOutBack' });
+      globoA.textContent = '';
+      let i = 0;
+      tecleo = setInterval(() => { globoA.textContent = t.slice(0, ++i); if (i >= t.length) clearInterval(tecleo); }, 22);
+      aveA.hablar(Math.min(2600, t.length * 22 + 200));
+    };
+
+    // Ojos: siguen el puntero o el texto que se escribe (desplazamiento máximo ~4 unidades del dibujo)
+    let mirarX = 0, mirarY = 0;
+    const mirar = (x, y) => {
+      mirarX = Math.max(-4, Math.min(4, x)); mirarY = Math.max(-3, Math.min(4, y));
+      if (!animar) return;
+      A.remove(ojo);
+      A({ targets: ojo, translateX: mirarX, translateY: mirarY, duration: 220, easing: 'easeOutQuad' });
+    };
+    let tapado = false;
+    let raf = 0;
+    if (animar && window.matchMedia('(pointer: fine)').matches) {
+      document.addEventListener('pointermove', (e) => {
+        if (raf || tapado || document.activeElement?.matches('input')) return;
+        raf = requestAnimationFrame(() => {
+          raf = 0;
+          const r = ojo.getBoundingClientRect();
+          const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+          const d = Math.hypot(dx, dy) || 1;
+          mirar((dx / d) * 4, (dy / d) * 3.5);
+        });
+      }, { passive: true });
+    }
+
+    // Ala sobre los ojos (contraseña) o espiando (contraseña visible)
+    const posAla = (grados, dur = 420) => {
+      if (!animar) return;
+      A.remove(ala);
+      A({ targets: ala, rotate: grados, duration: dur, easing: grados ? 'easeOutBack' : 'easeOutQuad' });
+    };
+    // El ala va detrás de la cabeza; para taparse los ojos la pasamos al frente.
+    const cabezaA = dibujo.querySelector('.ave-cabeza');
+    const alFrente = (si) => { if (si) todoA.append(ala); else todoA.insertBefore(ala, cabezaA); };
+    const taparOjos = () => { tapado = true; alFrente(true); posAla(-154); mirar(0, 2); };
+    const espiar = () => { tapado = true; alFrente(true); posAla(-120); mirar(3, 1); };
+    const destapar = () => {
+      if (!tapado) return;
+      tapado = false; posAla(0);
+      setTimeout(() => { if (!tapado) alFrente(false); }, animar ? 260 : 0);
+    };
+
+    const form = cajaAcceso.querySelector('form');
+    const nombreCampo = (input) => input.closest('label')?.querySelector('span')?.textContent.trim().toLowerCase() || '';
+    const verVisible = (input) => input.type === 'text' && input.closest('.campo-clave');
+    form?.addEventListener('focusin', (e) => {
+      const input = e.target.closest('input');
+      if (!input) return;
+      if (input.closest('.campo-clave')) {
+        if (verVisible(input)) { espiar(); decirA('Jeje, estoy espiando un poquito… 👀'); } else { taparOjos(); decirA('Escribe tu contraseña, yo no miro 🙈'); }
+        return;
+      }
+      destapar();
+      const campo = nombreCampo(input);
+      if (input.type === 'email') decirA('Escribe tu correo, te lo cuido 💌');
+      else if (campo.includes('nombre')) decirA('¿Cómo te llamas? Así te saludo bien.');
+      else if (campo.includes('celular') || input.type === 'tel') decirA('Tu celular es para confirmarte la visita por WhatsApp.');
+      else if (input.type === 'checkbox') decirA('Lee y acepta, es para cuidar tus datos.');
+      if (input.type !== 'checkbox') mirar(-4 + Math.min(8, input.value.length * 0.3), 4);
+    });
+    form?.addEventListener('focusout', () => {
+      setTimeout(() => { if (!form.contains(document.activeElement)) { destapar(); mirar(0, 0); } }, 60);
+    });
+    form?.addEventListener('input', (e) => {
+      const input = e.target.closest('input');
+      if (!input || input.closest('.campo-clave') || input.type === 'checkbox') return;
+      // Los ojos van de izquierda a derecha siguiendo lo que se escribe
+      mirar(-4 + Math.min(8, input.value.length * 0.3), 4);
+      if (animar && input.value.length % 6 === 0) aveA.saltar();
+      if (input.type === 'email' && /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(input.value)) decirA('¡Ese correo se ve perfecto! ✨');
+    });
+    // Botón Ver/Ocultar de la contraseña
+    cajaAcceso.querySelectorAll('[data-ver-clave]').forEach((b) => b.addEventListener('click', () => {
+      setTimeout(() => {
+        const input = b.parentElement.querySelector('input');
+        if (input.type === 'text') { espiar(); decirA('Jeje, estoy espiando un poquito… 👀', { forzar: true }); } else { taparOjos(); decirA('Listo, ya no miro 🙈', { forzar: true }); }
+      }, 0);
+    }));
+
+    botonA.addEventListener('click', () => { aveA.saludar(); aveA.saltar(); decirA(ayuda, { forzar: true }); });
+
+    const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
+    let pensandoAnim = null;
+    window.AmizooAcceso = {
+      pensando() {
+        destapar(); mirar(0, 4);
+        decirA('Revisando… 🔎', { forzar: true });
+        if (animar) { pensandoAnim?.pause(); pensandoAnim = A({ targets: vuelo, translateY: [0, -10], direction: 'alternate', loop: true, duration: 260, easing: 'easeInOutSine' }); aveA.aletear(8); }
+      },
+      error(msg) {
+        pensandoAnim?.pause();
+        destapar();
+        decirA(msg || 'Uy… algo no coincide. Revisa y probamos otra vez.', { forzar: true });
+        if (!animar) return;
+        A({ targets: vuelo, translateY: 0, duration: 200, easing: 'easeOutQuad' });
+        A({ targets: todoA, translateX: [0, -9, 9, -7, 7, -4, 0], duration: 620, easing: 'easeInOutSine' });
+        A({ targets: form, translateX: [0, -8, 8, -5, 5, 0], duration: 480, easing: 'easeInOutSine' });
+      },
+      // Celebra sin irse (por ejemplo, al enviar el enlace de recuperación)
+      celebrar(t) {
+        pensandoAnim?.pause();
+        destapar(); mirar(0, 0);
+        decirA(t || '¡Listo! 🎉', { forzar: true });
+        if (!animar) return;
+        A({ targets: vuelo, translateY: 0, duration: 200, easing: 'easeOutQuad' });
+        confeti(dibujo); fiestaEscena(); aveA.saludar(); aveA.saltar();
+      },
+      // Celebra y sale volando; la promesa se resuelve cuando ya se fue (para redirigir después)
+      async exito(nombre) {
+        pensandoAnim?.pause();
+        destapar(); mirar(0, -2);
+        const primer = String(nombre || '').trim().split(/\s+/)[0];
+        decirA(primer ? `¡Hola, ${primer}! Vamos 🎉` : '¡Listo! Vamos 🎉', { forzar: true });
+        if (!animar) { await esperar(500); return; }
+        confeti(dibujo); fiestaEscena();
+        aveA.saludar();
+        await A({ targets: vuelo, translateY: [0, -24, 0], scaleY: [1, .92, 1], duration: 520, easing: 'easeOutQuad' }).finished;
+        aveA.aletear(14);
+        await A({ targets: vuelo, translateX: [0, 60, 240], translateY: [0, -120, -420], rotate: [0, -10, -18], opacity: [1, 1, 0], duration: 1000, easing: 'easeInQuad' }).finished;
+      },
+    };
+
+    // Plumas y corazones de colores que saltan del ave
+    function confeti(desde) {
+      const r = desde.getBoundingClientRect();
+      const colores = [P.amarillo, P.turquesa, P.menta, P.verde];
+      const piezas = Array.from({ length: 16 }, (_, i) => {
+        const s = document.createElement('span');
+        s.className = 'acceso-confeti';
+        s.style.background = colores[i % colores.length];
+        s.style.left = `${r.left + r.width / 2}px`;
+        s.style.top = `${r.top + r.height / 2}px`;
+        document.body.append(s);
+        return s;
+      });
+      A({
+        targets: piezas,
+        translateX: () => A.random(-140, 140), translateY: () => A.random(-160, 40),
+        rotate: () => A.random(-260, 260), scale: [1, 0.4], opacity: [1, 0],
+        duration: () => A.random(900, 1300), easing: 'easeOutCubic',
+        complete: () => piezas.forEach((p) => p.remove()),
+      });
+    }
+
+    // Llegada: entra volando en arco desde arriba a la derecha y se posa sobre la tarjeta
+    const saludoInicial = () => {
+      const h = new Date().getHours();
+      const franja = h < 12 ? '¡Buenos días!' : h < 19 ? '¡Buenas tardes!' : '¡Buenas noches!';
+      decirA(`${franja} Soy Amizoo. Toca aquí si necesitas ayuda.`);
+    };
+    if (animar) {
+      A.set(vuelo, { translateX: 260, translateY: -220, rotate: -20, opacity: 0 });
+      setTimeout(() => {
+        aveA.aletear(12);
+        A.timeline({ easing: 'easeOutCubic' })
+          .add({ targets: vuelo, opacity: [0, 1], translateX: [260, 30], translateY: [-220, -40], rotate: [-20, 6], duration: 700 })
+          .add({ targets: vuelo, translateX: [30, 0], translateY: [-40, 0], rotate: [6, 0], duration: 420, easing: 'easeOutBack' })
+          .add({ targets: vuelo, scaleY: [1, .9, 1], scaleX: [1, 1.06, 1], duration: 320, easing: 'easeOutQuad', complete: () => { aveA.saludar(); saludoInicial(); } });
+      }, 350);
+      // Cuando está quieto: de vez en cuando salta, aletea o ladea el cuerpo
+      setInterval(() => {
+        if (document.hidden || tapado || form?.contains(document.activeElement)) return;
+        const r = Math.random();
+        if (r < 0.35) aveA.saltar();
+        else if (r < 0.65) aveA.aletear(3);
+        else A({ targets: todoA, rotate: [0, -8, 0], duration: 900, easing: 'easeInOutSine' });
+      }, 4200);
+    } else saludoInicial();
+
+    // Escena ilustrada (en lugar de foto): sol, nubes, colinas, la casita y los animales que esperan la visita
+    const escena = seccion?.querySelector('.acceso__escena');
+    let fiestaEscena = () => {};
+    if (escena) {
+      const corazon = `<svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.6-9.5 9-9.5 9z" fill="${P.amarillo}" stroke="${P.grafito}" stroke-width="1.6"/></svg>`;
+      const flor = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><g class="esc-flor"><path d="M0 0 v-22" stroke="${P.grafito}" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cy="-26" r="7" fill="${P.amarillo}" stroke="${P.grafito}" stroke-width="2"/><circle cy="-26" r="2.6" fill="${P.marfil}"/></g></g>`;
+      escena.innerHTML = `
+        <svg class="esc-fondo" viewBox="0 0 400 500" preserveAspectRatio="xMidYMax slice" focusable="false">
+          <rect width="400" height="500" fill="${P.menta}"/>
+          <g transform="translate(318 92)"><g class="esc-sol">
+            <g stroke="${P.amarillo}" stroke-width="6" stroke-linecap="round">${Array.from({ length: 10 }, (_, i) => `<path d="M0 -50 v-14" transform="rotate(${i * 36})"/>`).join('')}</g>
+            <circle r="36" fill="${P.amarillo}" stroke="${P.grafito}" stroke-width="3"/>
+            <circle cx="-11" cy="-4" r="3.4" fill="${P.grafito}"/><circle cx="11" cy="-4" r="3.4" fill="${P.grafito}"/>
+            <path d="M-11 10 q11 10 22 0" fill="none" stroke="${P.grafito}" stroke-width="3" stroke-linecap="round"/>
+          </g></g>
+          <g class="esc-nube" transform="translate(40 70)"><g class="esc-nube-in"><path d="M10 40 q-14 0 -10 -16 q4 -14 22 -10 q6 -18 28 -14 q18 4 18 20 q16 0 14 14 q-2 8 -12 8 Z" fill="${P.marfil}" stroke="${P.grafito}" stroke-width="3" stroke-linejoin="round"/></g></g>
+          <g class="esc-nube" transform="translate(170 150) scale(.7)"><g class="esc-nube-in"><path d="M10 40 q-14 0 -10 -16 q4 -14 22 -10 q6 -18 28 -14 q18 4 18 20 q16 0 14 14 q-2 8 -12 8 Z" fill="${P.marfil}" stroke="${P.grafito}" stroke-width="3" stroke-linejoin="round"/></g></g>
+          <path d="M-10 300 Q90 230 200 280 T420 250 V500 H-10 Z" fill="${P.turquesa}" opacity=".45"/>
+          <g transform="translate(250 228)">
+            <path d="M0 40 L36 10 L72 40 Z" fill="${P.amarillo}" stroke="${P.grafito}" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="8" y="40" width="56" height="44" fill="${P.marfil}" stroke="${P.grafito}" stroke-width="3"/>
+            <rect x="29" y="58" width="16" height="26" rx="3" fill="${P.turquesa}" stroke="${P.grafito}" stroke-width="3"/>
+            <rect x="12" y="48" width="12" height="12" rx="2" fill="${P.menta}" stroke="${P.grafito}" stroke-width="2.4"/>
+            <path d="M36 22 v12 M30 28 h12" stroke="${P.grafito}" stroke-width="3.4" stroke-linecap="round"/>
+          </g>
+          <path d="M-10 360 Q120 300 240 345 T420 330 V500 H-10 Z" fill="${P.turquesa}" opacity=".75"/>
+          <path d="M-10 420 Q140 380 260 410 T420 400 V500 H-10 Z" fill="${P.turquesa}"/>
+          <path d="M290 312 Q270 360 230 400 T160 470" fill="none" stroke="${P.marfil}" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round" class="esc-camino"/>
+          ${flor(36, 432)}${flor(64, 440, .8)}${flor(352, 426)}${flor(378, 436, .75)}${flor(206, 448, .7)}
+        </svg>
+        ${[['perro', 4, 7, 30], ['gato', 30, 10, 24], ['conejo', 54, 9, 19], ['oveja', 72, 6, 27]].map(([t, x, y, w]) =>
+          `<div class="esc-animal" data-tipo="${t}" style="left:${x}%;bottom:${y}%;width:${w}%"><svg viewBox="${DIBUJOS[t].vb}" focusable="false"><g class="cr-todo" ${trazo}>${DIBUJOS[t].svg}</g></svg></div>`).join('')}
+        <div class="esc-corazones"></div>`;
+      if (animar) {
+        const animales = [...escena.querySelectorAll('.esc-animal')];
+        const capa = escena.querySelector('.esc-corazones');
+        let visibleE = false;
+        new IntersectionObserver((e) => { visibleE = e[0].isIntersecting; }).observe(escena);
+        const vivo = () => visibleE && !document.hidden;
+        const sol = escena.querySelector('.esc-sol');
+        const prep = (els, origen) => els.forEach((n) => { n.style.transformBox = 'fill-box'; n.style.transformOrigin = origen; });
+        prep([sol], '50% 50%');
+        prep([...escena.querySelectorAll('.esc-flor')], '50% 100%');
+        A({ targets: sol, rotate: 360, duration: 30000, loop: true, easing: 'linear' });
+        A({ targets: sol, scale: [1, 1.06], direction: 'alternate', loop: true, duration: 1800, easing: 'easeInOutSine' });
+        A({ targets: escena.querySelectorAll('.esc-nube-in'), translateX: (el, i) => [0, i ? -50 : 60], direction: 'alternate', loop: true, duration: (el, i) => 8000 + i * 3000, easing: 'easeInOutSine' });
+        A({ targets: escena.querySelectorAll('.esc-flor'), rotate: [-8, 8], direction: 'alternate', loop: true, delay: A.stagger(250), duration: 1500, easing: 'easeInOutSine' });
+        A({ targets: escena.querySelector('.esc-camino'), strokeDashoffset: [0, -64], loop: true, duration: 2600, easing: 'linear' });
+        // Corazón que sube desde un animal
+        const latido = (el) => {
+          const c = document.createElement('span');
+          c.className = 'esc-corazon';
+          c.innerHTML = corazon;
+          const re = escena.getBoundingClientRect(), ra = el.getBoundingClientRect();
+          c.style.left = `${ra.left - re.left + ra.width / 2}px`;
+          c.style.top = `${ra.top - re.top}px`;
+          capa.append(c);
+          A({ targets: c, translateY: [0, -90], translateX: () => A.random(-18, 18), scale: [0.4, 1.1], opacity: [1, 0], duration: 1500, easing: 'easeOutQuad', complete: () => c.remove() });
+        };
+        const brinco = (el, alto = 26) => A({ targets: el, translateY: [0, -alto, 0], scaleY: [1, .92, 1], duration: 560, easing: 'easeOutQuad' });
+        // Llegan saltando uno por uno
+        A.set(animales, { translateY: 160, opacity: 0 });
+        A({ targets: animales, translateY: [160, 0], opacity: [0, 1], delay: A.stagger(220, { start: 500 }), duration: 900, easing: 'easeOutElastic(1, .7)',
+          complete: () => animales.forEach((el) => vidaCriatura(el, vivo)) });
+        setInterval(() => {
+          if (!vivo()) return;
+          const el = animales[A.random(0, animales.length - 1)];
+          brinco(el); latido(el);
+        }, 2400);
+        fiestaEscena = () => animales.forEach((el, i) => setTimeout(() => { brinco(el, 40); latido(el); }, i * 120));
+      }
+    }
+  }
+
   /* ---------- Animaciones de la página con anime.js ---------- */
   if (!animar) return;
 

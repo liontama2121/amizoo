@@ -459,13 +459,9 @@ mark { background: var(--mango); color: var(--grafito); border-radius: 4px; padd
 .acceso-ave__globo { position: absolute; right: calc(clamp(.6rem, 4vw, 2rem) + clamp(88px, 18vw, 128px) + .3rem); bottom: 1.6rem; max-width: min(320px, calc(100% - 140px)); min-height: 2.6rem; margin: 0; padding: .65rem 1rem; border-radius: 20px 20px 6px 20px; background: var(--marfil); color: var(--grafito); font-weight: 600; font-size: .95rem; line-height: 1.35; box-shadow: var(--sombra-sm); opacity: 0; transform-origin: 100% 100%; }
 .acceso-ave__globo.visible { opacity: 1; }
 .acceso-ave__globo::after { content: ""; position: absolute; right: -7px; bottom: 8px; width: 14px; height: 14px; background: inherit; transform: rotate(45deg); border-radius: 2px; }
-.acceso__escena { display: block; position: relative; isolation: isolate; aspect-ratio: 16 / 11; box-shadow: var(--sombra); border-radius: var(--r); }
-@media (min-width: 960px) { .acceso__escena { aspect-ratio: 1 / 1; } }
-.acceso__escena { background: none; box-shadow: none; }
-.acceso__escena::before { display: none; }
-.esc-carro { position: absolute; left: 4%; width: 92%; bottom: 30%; height: auto; overflow: visible; }
-@media (min-width: 960px) { .esc-carro { bottom: 32%; } }
-.esc-animal { position: absolute; padding: 0; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-.esc-globo { position: absolute; left: 50%; bottom: 92%; translate: -50% 0; padding: .3rem .7rem; border-radius: 14px; background: var(--marfil); color: var(--grafito); font: 700 clamp(.8rem, 1.2vw, 1rem)/1.2 var(--f-titulo); white-space: nowrap; box-shadow: var(--sombra-sm); opacity: 0; pointer-events: none; }
-.esc-animal svg { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 6px 5px color-mix(in srgb, var(--grafito) 25%, transparent)); }
 @media (max-width: 420px) { .acceso-ave__globo { font-size: .88rem; max-width: calc(100% - 118px); } }
+
+.acceso__escena { display: flex; align-items: center; aspect-ratio: 16 / 9; overflow: hidden; }
+@media (min-width: 960px) { .acceso__escena { aspect-ratio: 1 / 1; } }
+.acceso__escena::before { display: none; }
+.esc-carro { display: block; width: 100%; height: auto; cursor: pointer; overflow: visible; }

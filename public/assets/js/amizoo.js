@@ -898,48 +898,75 @@
       decirA(seccion?.dataset.guia || 'Llena los datos y toca el botón amarillo.');
     });
 
-    // Escena ilustrada (en lugar de foto): las mascotas saludan
+    // Escena (en lugar de foto): el carro AmiZoo va andando y las mascotas saludan desde las ventanas
     const escena = seccion?.querySelector('.acceso__escena');
     if (escena) {
+      const ventana = 'M92 90 Q114 64 148 58 L246 56 Q268 58 288 82 Z';
+      // [tipo, x, y, ancho, lo que dice]
+      const pasajeros = [['gato', 108, 52, 54, '¡Miau!'], ['conejo', 160, 50, 34, '¡Hola!'], ['perro', 204, 50, 66, '¡Guau!']];
+      const rueda = (x) => `<g transform="translate(${x} 140)"><circle r="28" fill="#1E1F22"/><g class="esc-rueda"><circle r="15" fill="#9AA0A6"/><g stroke="${P.grafito}" stroke-width="3" stroke-linecap="round">${[0, 72, 144, 216, 288].map((g) => `<path d="M0 0 V-13" transform="rotate(${g})"/>`).join('')}</g><circle r="5" fill="${P.grafito}"/></g></g>`;
       escena.innerHTML = `
-        <svg class="esc-carro" viewBox="0 0 400 170" focusable="false">
-          <ellipse cx="200" cy="158" rx="186" ry="9" fill="${P.grafito}" opacity=".18"/>
-          <path d="M22 128 Q16 104 30 98 L74 90 Q104 58 146 50 L248 48 Q276 50 300 76 L360 86 Q386 92 388 114 L390 130 Q390 140 380 140 L338 140 A34 34 0 0 0 270 140 L130 140 A34 34 0 0 0 62 140 L32 140 Q22 140 22 128 Z" fill="${P.grafito}"/>
-          <path d="M92 90 Q114 64 148 58 L246 56 Q268 58 288 82 Z" fill="${P.menta}" opacity=".85"/>
-          <path d="M192 56 V92 M116 70 L104 90" stroke="${P.grafito}" stroke-width="6"/>
-          <path d="M36 112 H384" stroke="${P.turquesa}" stroke-width="10"/>
-          <text x="200" y="133" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="17" fill="${P.marfil}">AmiZoo</text>
-          <path d="M192 96 V138 M276 98 V138" stroke="#4A4D52" stroke-width="2"/>
-          <rect x="166" y="100" width="16" height="4" rx="2" fill="#6B6F75"/><rect x="250" y="100" width="16" height="4" rx="2" fill="#6B6F75"/>
-          <path d="M372 96 Q386 98 388 108 L368 108 Z" fill="${P.amarillo}"/>
-          <rect x="22" y="100" width="10" height="12" rx="3" fill="${P.amarillo}" opacity=".85"/>
-          <path d="M150 54 Q200 50 244 52" stroke="#5A5E64" stroke-width="3" fill="none" stroke-linecap="round"/>
-          ${[96, 304].map((x) => `<g transform="translate(${x} 140)"><circle r="28" fill="#1E1F22"/><circle r="15" fill="#9AA0A6"/><circle r="5" fill="${P.grafito}"/></g>`).join('')}
-        </svg>
-        ${[['perro', 4, 5, 28, '¡Guau!'], ['gato', 30, 6, 23, '¡Miau!'], ['conejo', 54, 6, 18, '¡Hola!'], ['oveja', 72, 4, 26, '¡Beee!']].map(([t, x, y, w, dice]) =>
-          `<button type="button" class="esc-animal" data-tipo="${t}" style="left:${x}%;bottom:${y}%;width:${w}%" aria-label="${t} saluda" tabindex="-1">
-            <span class="esc-globo">${dice}</span>
-            <svg viewBox="${DIBUJOS[t].vb}" focusable="false"><g class="cr-todo" ${trazo}>${DIBUJOS[t].svg}</g></svg>
-          </button>`).join('')}`;
-      const animales = [...escena.querySelectorAll('.esc-animal')];
-      const saludar = (el) => {
-        const globo = el.querySelector('.esc-globo');
-        if (!animar) { globo.style.opacity = 1; return; }
-        const svg = el.querySelector('svg');
+        <svg class="esc-carro" viewBox="-30 -24 440 210" focusable="false" role="img" aria-label="El carro de AmiZoo con un perro, un gato y un conejo saludando por las ventanas">
+          <defs><clipPath id="esc-ventana"><path d="${ventana}"/></clipPath></defs>
+          <path class="esc-via" d="M-30 176 H410" stroke="${P.grafito}" stroke-opacity=".25" stroke-width="4" stroke-dasharray="26 18" stroke-linecap="round"/>
+          <g class="esc-viento" stroke="${P.grafito}" stroke-opacity=".35" stroke-width="4" stroke-linecap="round">
+            <path d="M-6 96 H-26"/><path d="M-2 116 H-30"/><path d="M-8 132 H-22"/>
+          </g>
+          <ellipse cx="200" cy="160" rx="186" ry="8" fill="${P.grafito}" opacity=".16"/>
+          <g class="esc-chasis">
+            <path d="M22 128 Q16 104 30 98 L74 90 Q104 58 146 50 L248 48 Q276 50 300 76 L360 86 Q386 92 388 114 L390 130 Q390 140 380 140 L338 140 A34 34 0 0 0 270 140 L130 140 A34 34 0 0 0 62 140 L32 140 Q22 140 22 128 Z" fill="${P.grafito}"/>
+            <path d="${ventana}" fill="${P.menta}"/>
+            <g clip-path="url(#esc-ventana)">
+              ${pasajeros.map(([t, x, y, w]) => `<g class="esc-pasajero" data-tipo="${t}"><svg x="${x}" y="${y}" width="${w}" height="${(w * DIBUJOS[t].vb.split(' ')[3] / DIBUJOS[t].vb.split(' ')[2]).toFixed(1)}" viewBox="${DIBUJOS[t].vb}" overflow="visible"><g class="cr-todo" ${trazo}>${DIBUJOS[t].svg}</g></svg></g>`).join('')}
+            </g>
+            <path d="M192 54 V92 M116 70 L104 90" stroke="${P.grafito}" stroke-width="6"/>
+            <path d="M36 112 H384" stroke="${P.turquesa}" stroke-width="10"/>
+            <text x="200" y="133" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="17" fill="${P.marfil}">AmiZoo</text>
+            <path d="M192 96 V138 M276 98 V138" stroke="#4A4D52" stroke-width="2"/>
+            <rect x="166" y="100" width="16" height="4" rx="2" fill="#6B6F75"/><rect x="250" y="100" width="16" height="4" rx="2" fill="#6B6F75"/>
+            <path d="M372 96 Q386 98 388 108 L368 108 Z" fill="${P.amarillo}"/>
+            <rect x="22" y="100" width="10" height="12" rx="3" fill="${P.amarillo}" opacity=".85"/>
+          </g>
+          ${rueda(96)}${rueda(304)}
+          ${pasajeros.map(([, x, , w, dice], i) => `<g transform="translate(${x + w / 2 + (i === 1 ? -6 : 0)} ${i === 1 ? 6 : 32})"><g class="esc-globo-svg" opacity="0">
+            <rect x="-30" y="-15" width="60" height="28" rx="12" fill="${P.marfil}" stroke="${P.grafito}" stroke-width="2.4"/>
+            <text y="5" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="13" fill="${P.grafito}">${dice}</text>
+          </g></g>`).join('')}
+        </svg>`;
+      const carro = escena.querySelector('.esc-carro');
+      const subidos = [...escena.querySelectorAll('.esc-pasajero')];
+      const globos = [...escena.querySelectorAll('.esc-globo-svg')];
+      const saludar = (i) => {
+        const globo = globos[i];
+        if (!animar) { globo.setAttribute('opacity', 1); return; }
+        const el = subidos[i];
         const cabeza = el.querySelector('.cr-cabeza');
-        A.remove([svg, globo]);
-        A({ targets: svg, translateY: [0, -18, 0], duration: 520, easing: 'easeOutQuad' });
-        if (cabeza) { cabeza.style.transformBox = 'fill-box'; cabeza.style.transformOrigin = '50% 90%'; A({ targets: cabeza, rotate: [0, -12, 10, 0], duration: 900, easing: 'easeInOutSine' }); }
+        A.remove([el, globo]);
+        A({ targets: el, translateY: [0, -9, 0], duration: 600, easing: 'easeOutQuad' });
+        if (cabeza) { cabeza.style.transformBox = 'fill-box'; cabeza.style.transformOrigin = '50% 90%'; A({ targets: cabeza, rotate: [0, -14, 12, 0], duration: 900, easing: 'easeInOutSine' }); }
+        globo.style.transformBox = 'fill-box'; globo.style.transformOrigin = '50% 100%';
         A.timeline({ easing: 'easeOutQuad' })
-          .add({ targets: globo, opacity: [0, 1], translateY: [8, 0], scale: [0.7, 1], duration: 380, easing: 'easeOutBack' })
-          .add({ targets: globo, opacity: 0, duration: 300, delay: 2600 });
+          .add({ targets: globo, opacity: [0, 1], scale: [0.6, 1], duration: 380, easing: 'easeOutBack' })
+          .add({ targets: globo, opacity: 0, duration: 300, delay: 2200 });
       };
-      animales.forEach((el, i) => {
-        if (animar) vidaCriatura(el, () => !document.hidden);
-        setTimeout(() => saludar(el), 900 + i * 450);
-        el.addEventListener('click', () => saludar(el));
-        el.addEventListener('pointerenter', () => saludar(el));
-      });
+      carro.addEventListener('click', () => globos.forEach((_, i) => setTimeout(() => saludar(i), i * 300)));
+      if (!animar) { globos.forEach((g) => g.setAttribute('opacity', 1)); } else {
+        let visibleE = true;
+        new IntersectionObserver((e) => { visibleE = e[0].isIntersecting; }).observe(escena);
+        const prep = (els) => els.forEach((n) => { n.style.transformBox = 'fill-box'; n.style.transformOrigin = '50% 50%'; });
+        prep([...escena.querySelectorAll('.esc-rueda')]);
+        // Va andando: ruedas, rebote del chasis, viento y la vía que pasa
+        A({ targets: escena.querySelectorAll('.esc-rueda'), rotate: 360, duration: 700, loop: true, easing: 'linear' });
+        A({ targets: escena.querySelector('.esc-chasis'), translateY: [0, -2.2], direction: 'alternate', loop: true, duration: 220, easing: 'easeInOutSine' });
+        A({ targets: escena.querySelector('.esc-via'), strokeDashoffset: [0, 44], duration: 450, loop: true, easing: 'linear' });
+        A({ targets: escena.querySelectorAll('.esc-viento path'), translateX: [0, -14], opacity: [1, 0], delay: A.stagger(140), duration: 600, loop: true, easing: 'easeOutQuad' });
+        subidos.forEach((el) => vidaCriatura(el, () => visibleE && !document.hidden));
+        // Llega andando desde la izquierda y cada mascota saluda; después saludan por turnos
+        A({ targets: carro, translateX: ['-120%', '0%'], duration: 1500, easing: 'easeOutCubic',
+          complete: () => globos.forEach((_, i) => setTimeout(() => saludar(i), 200 + i * 700)) });
+        let turno = 0;
+        setInterval(() => { if (visibleE && !document.hidden) saludar(turno++ % globos.length); }, 4200);
+      }
     }
   }
 

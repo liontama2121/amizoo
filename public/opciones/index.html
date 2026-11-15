@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opciones de diseño | AmiZoo</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<style>
+  .ops { display: grid; gap: 1.2rem; list-style: none; padding: 0; margin: 2rem 0 0; }
+  @media (min-width: 820px) { .ops { grid-template-columns: 1fr 1fr; } }
+  .op { display: grid; gap: .6rem; background: var(--marfil); border: 2px solid var(--grafito); border-radius: 30px; padding: 1.5rem; text-decoration: none; position: relative; transition: transform .35s var(--ease); }
+  .op:hover { transform: translateY(-4px); background: var(--menta); }
+  .op .letra { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--mango); border: 2px solid var(--grafito); font-family: var(--f-titulo); font-weight: 800; font-size: 1.3rem; }
+  .op strong { font-family: var(--f-titulo); font-size: 1.5rem; }
+  .op p { margin: 0; }
+  .op .ave { position: absolute; right: 20px; top: 20px; width: 70px; }
+</style>
+</head>
+<body>
+<main class="seccion">
+  <div class="contenedor">
+    <img src="/assets/logos/logo-horizontal-480.png" width="480" height="181" alt="AmiZoo" style="height:56px;width:auto;margin-bottom:2rem">
+    <h1 style="font-size:clamp(2.2rem,4vw,3.4rem)">Opciones de diseño del inicio</h1>
+    <p class="lead">Las cuatro usan la paleta, las tipografías y los logos oficiales. Cambia la forma de presentar a AmiZoo y el papel del periquito Amizoo.</p>
+    <ul class="ops" role="list">
+      <li><a class="op" href="/"><span class="letra">A</span><strong>Ruta a domicilio</strong><p>La actual. Rotulado de servicio móvil: franja mango, desfile de animales por tamaño, línea de ruta. Amizoo saluda al entrar y vive en la esquina.</p><svg class="ave" viewBox="0 0 90 120" aria-hidden="true"><use href="/assets/img/animales.svg#ave"/></svg></a></li>
+      <li><a class="op" href="/opciones/bento"><span class="letra">B</span><strong>Bento suave</strong><p>Estilo premium "soft": menú flotante tipo isla, tarjetas con doble bisel, mucho aire. Amizoo saluda grande dentro de la escena principal.</p><svg class="ave" viewBox="0 0 110 130" aria-hidden="true"><use href="/assets/img/animales.svg#ave-saluda"/></svg></a></li>
+      <li><a class="op" href="/opciones/guia"><span class="letra">C</span><strong>Amizoo te guía</strong><p>El periquito es el protagonista: el inicio es una conversación con él. Pregunta "¿A quién vamos a visitar?" con botones grandes por especie. Ideal para personas mayores.</p><svg class="ave" viewBox="0 0 110 130" aria-hidden="true"><use href="/assets/img/animales.svg#ave-saluda"/></svg></a></li>
+      <li><a class="op" href="/opciones/mapa"><span class="letra">D</span><strong>Mapa de vuelo</strong><p>Amizoo vuela en vivo sobre un mapa esquemático de la cobertura, de Chapinero Alto a Sopó, pasando por las casas de sus pacientes.</p><svg class="ave" viewBox="0 0 160 120" aria-hidden="true"><use href="/assets/img/animales.svg#ave-vuela"/></svg></a></li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>

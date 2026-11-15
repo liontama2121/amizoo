@@ -1,0 +1,19 @@
+name = "amizoo"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "public"
+
+# Bindings (se crean en Fase 2)
+[[d1_databases]]
+binding = "DB"
+database_name = "amizoo"
+database_id = "REEMPLAZAR_CON_ID_DE_D1"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "amizoo-files"
+
+[vars]
+TZ_NEGOCIO = "America/Bogota"
+CORREO_AMIZOO = "amizoo.contacto@gmail.com"
+

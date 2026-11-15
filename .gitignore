@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.dev.vars
+.impeccable/review/
+.impeccable/brief-body.md
+public/*.html
+public/sitemap.xml
+public/robots.txt

@@ -1,0 +1,25 @@
+<!--meta {"title":"Preguntas frecuentes","description":"Resolvemos tus dudas sobre los servicios veterinarios a domicilio de AmiZoo: especies, zonas de cobertura, precios, planes y cómo agendar.","path":"/preguntas-frecuentes"} -->
+<section class="portada" data-guia="Aquí respondo las preguntas más comunes." data-guia-titulo="Preguntas" aria-labelledby="t">
+  <div class="contenedor portada__grid">
+    <div>
+    <h1 id="t">Preguntas frecuentes</h1>
+    <p class="lead">Toca una pregunta para ver la respuesta. Si no encuentras lo que buscas, escríbenos por WhatsApp.</p>
+    </div>
+    <div class="portada__foto">{{foto:periquito-1:prioridad mitad:Periquito australiano posado sobre madera}}</div>
+  </div>
+</section>
+
+<section class="seccion" aria-label="Preguntas y respuestas" data-guia="Escribe una palabra en la cajita, por ejemplo vacunas, o toca una pregunta para abrir la respuesta." data-guia-titulo="Cómo buscar">
+  <div class="contenedor-estrecho">
+    <div class="buscador-barrio" style="margin-bottom:2.5rem">
+      <label for="buscar-faq">Busca tu pregunta</label>
+      <div class="campo-icono">{{ico:magnifying-glass}}<input class="campo" id="buscar-faq" type="search" autocomplete="off" placeholder="Por ejemplo: vacunas, gatos, precio" data-buscar-faq aria-describedby="faq-resultado"></div>
+      <p class="resultado" id="faq-resultado" aria-live="polite"></p>
+    </div>
+    {{faq}}
+    <div class="aviso aviso--fuerte">
+      {{ico:warning}}
+      <p><strong>No atendemos urgencias.</strong> Si tu animal presenta una herida grave, sangrado abundante o un deterioro importante, escríbenos por <a href="{{wa}}">WhatsApp</a> o nuestras redes para orientarte sobre la atención adecuada.</p>
+    </div>
+  </div>
+</section>

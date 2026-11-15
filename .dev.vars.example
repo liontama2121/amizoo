@@ -1,0 +1,9 @@
+# Copiar a .dev.vars para desarrollo local. En producción usar: npx wrangler pages secret put NOMBRE
+SESSION_SECRET=
+ENCRYPTION_KEY=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+RESEND_API_KEY=
+# Opcionales
+# SITIO=http://localhost:8788
+# CORREO_REMITENTE=AmiZoo <onboarding@resend.dev>

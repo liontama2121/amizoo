@@ -1,0 +1,30 @@
+{
+  "actualizado": "2026-11-14",
+  "pendienteConfirmar": "Las preguntas frecuentes dicen 'desde la Calle 72 hacia el norte', pero Galerías, Chapinero Alto y la zona occidente no encajan en esa descripción. Confirmar con AmiZoo.",
+  "zonas": [
+    {
+      "id": "norte",
+      "nombre": "Zona Norte",
+      "tarifa": "bogota",
+      "barrios": ["Chicó Norte", "Santa Bárbara", "Cedritos", "Niza", "Colina Campestre", "La Castellana", "Mazurén", "Villa del Prado", "San José de Bavaria", "Mirandela"]
+    },
+    {
+      "id": "occidente",
+      "nombre": "Zona Occidente",
+      "tarifa": "bogota",
+      "barrios": ["La Española", "Quirigua", "Ciudadela Colsubsidio", "El Cortijo"]
+    },
+    {
+      "id": "oriente",
+      "nombre": "Zona Oriente",
+      "tarifa": "bogota",
+      "barrios": ["Chapinero Alto", "Galerías", "Rosales"]
+    },
+    {
+      "id": "fuera",
+      "nombre": "Fuera de Bogotá",
+      "tarifa": "fueraBogota",
+      "barrios": ["Municipios de la Sabana Norte de Cundinamarca hasta Sopó"]
+    }
+  ]
+}

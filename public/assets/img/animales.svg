@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- Ilustraciones originales AmiZoo. Paleta oficial: #73BEBD #EAC72E #C8F9E1 #F7F8F4 #34363A -->
+  <!-- Periquito australiano (mascota) -->
+  <symbol id="ave" viewBox="0 0 90 120">
+    <path fill="#73BEBD" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M30 86 L12 116 L22 116 L40 92 Z"/>
+    <ellipse fill="#73BEBD" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="46" cy="70" rx="24" ry="30"/>
+    <path fill="#C8F9E1" d="M38 88 C44 98 56 96 62 84 C58 92 46 94 38 88 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M28 60 C26 82 34 96 46 100 C40 86 40 70 44 58 Z"/>
+    <path d="M30 66 q5 -3 10 0 M30 74 q5 -3 10 0 M32 82 q5 -3 9 0 M35 90 q4 -2 7 0" fill="none" stroke="#34363A" stroke-width="2.5" stroke-linecap="round"/>
+    <circle fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="54" cy="36" r="20"/>
+    <path d="M38 26 q4 -3 8 0 M40 20 q4 -3 8 0 M47 17 q4 -3 8 0" fill="none" stroke="#34363A" stroke-width="2.2" stroke-linecap="round"/>
+    <path fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M70 36 C80 36 80 50 72 52 C72 46 70 42 66 41 Z"/>
+    <circle fill="#34363A" cx="60" cy="32" r="3.6"/>
+    <circle cx="61.2" cy="30.8" r="1.1" fill="#F7F8F4"/>
+    <circle fill="#73BEBD" cx="64" cy="48" r="4"/>
+    <circle fill="#34363A" cx="56" cy="54" r="2"/><circle fill="#34363A" cx="62" cy="56" r="2"/><circle fill="#34363A" cx="50" cy="55" r="1.8"/>
+    <path d="M42 100 v8 m-4 0 h8 M52 100 v8 m-4 0 h8" fill="none" stroke="#34363A" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+
+  <!-- Periquito volando -->
+  <symbol id="ave-vuela" viewBox="0 0 160 120">
+    <path fill="#73BEBD" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M44 70 L4 92 L10 100 L50 82 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M70 58 C56 30 60 8 74 4 C84 20 92 40 92 58 Z"/>
+    <path d="M70 20 q6 -2 10 2 M68 32 q7 -2 12 2 M70 44 q7 -2 12 2" fill="none" stroke="#34363A" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse fill="#73BEBD" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="78" cy="72" rx="38" ry="22" transform="rotate(-8 78 72)"/>
+    <path fill="#C8F9E1" d="M58 84 C70 94 92 92 104 82 C92 88 72 90 58 84 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M76 62 C70 38 82 16 98 12 C102 32 100 52 92 64 Z"/>
+    <path d="M84 30 q6 -2 10 2 M80 42 q7 -2 12 2 M80 54 q7 -2 11 2" fill="none" stroke="#34363A" stroke-width="2.5" stroke-linecap="round"/>
+    <circle fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="122" cy="56" r="19"/>
+    <path d="M108 46 q4 -3 8 0 M112 40 q4 -3 8 0 M119 38 q4 -3 8 0" fill="none" stroke="#34363A" stroke-width="2.2" stroke-linecap="round"/>
+    <path fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M138 56 C148 56 148 70 140 72 C140 66 138 62 134 61 Z"/>
+    <circle fill="#34363A" cx="128" cy="52" r="3.6"/><circle cx="129.2" cy="50.8" r="1.1" fill="#F7F8F4"/>
+    <circle fill="#73BEBD" cx="132" cy="67" r="3.6"/>
+    <path d="M70 92 l-4 10 M80 92 l-2 10" stroke="#34363A" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <!-- Periquito saludando -->
+  <symbol id="ave-saluda" viewBox="0 0 110 130">
+    <path fill="#73BEBD" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M34 96 L16 126 L26 126 L44 102 Z"/>
+    <ellipse fill="#73BEBD" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="50" cy="80" rx="24" ry="30"/>
+    <path fill="#C8F9E1" d="M42 98 C48 108 60 106 66 94 C62 102 50 104 42 98 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M32 70 C30 92 38 106 50 110 C44 96 44 80 48 68 Z"/>
+    <path d="M34 76 q5 -3 10 0 M34 84 q5 -3 10 0 M36 92 q5 -3 9 0" fill="none" stroke="#34363A" stroke-width="2.5" stroke-linecap="round"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M68 70 C80 60 92 40 100 26 C106 34 100 56 76 78 Z"/>
+    <path d="M80 58 q5 -1 7 3 M86 48 q5 -1 7 3 M92 38 q4 0 6 3" fill="none" stroke="#34363A" stroke-width="2.3" stroke-linecap="round"/>
+    <circle fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="56" cy="44" r="20"/>
+    <path d="M40 34 q4 -3 8 0 M42 28 q4 -3 8 0 M49 25 q4 -3 8 0" fill="none" stroke="#34363A" stroke-width="2.2" stroke-linecap="round"/>
+    <path fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M72 44 C82 44 82 58 74 60 C74 54 72 50 68 49 Z"/>
+    <path d="M58 40 q4 -4 8 0" fill="none" stroke="#34363A" stroke-width="3" stroke-linecap="round"/>
+    <circle fill="#73BEBD" cx="66" cy="56" r="4"/>
+    <circle fill="#34363A" cx="58" cy="62" r="2"/><circle fill="#34363A" cx="64" cy="64" r="2"/><circle fill="#34363A" cx="52" cy="63" r="1.8"/>
+    <path d="M46 110 v8 m-4 0 h8 M56 110 v8 m-4 0 h8" fill="none" stroke="#34363A" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Gato -->
+  <symbol id="gato" viewBox="0 0 120 130">
+    <path d="M36 122 C8 122 6 92 22 84" fill="none" stroke="#34363A" stroke-width="13" stroke-linecap="round"/>
+    <path d="M36 122 C8 122 6 92 22 84" fill="none" stroke="#EAC72E" stroke-width="7" stroke-linecap="round"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M34 124 C26 96 34 72 60 66 C86 72 94 96 86 124 Z"/>
+    <path fill="#F7F8F4" d="M50 124 C46 104 50 88 60 84 C70 88 74 104 70 124 Z"/>
+    <rect fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="48" y="100" width="11" height="24" rx="5.5"/>
+    <rect fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="62" y="100" width="11" height="24" rx="5.5"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M38 44 L40 14 L58 32 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M82 44 L80 14 L62 32 Z"/>
+    <path fill="#C8F9E1" d="M43 36 L44 22 L52 31 Z M77 36 L76 22 L68 31 Z"/>
+    <circle fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="60" cy="50" r="25"/>
+    <path d="M52 28 v6 M60 26 v7 M68 28 v6" stroke="#34363A" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse fill="#34363A" cx="51" cy="50" rx="3" ry="4.4"/>
+    <ellipse fill="#34363A" cx="69" cy="50" rx="3" ry="4.4"/>
+    <path fill="#34363A" d="M56 58 h8 l-4 4.5 Z"/>
+    <path d="M60 62.5 q-3 4 -7 2 M60 62.5 q3 4 7 2" fill="none" stroke="#34363A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M44 60 l-12 -2 M44 64 l-12 2 M76 60 l12 -2 M76 64 l12 2" stroke="#34363A" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Perro -->
+  <symbol id="perro" viewBox="0 0 170 150">
+    <path d="M36 74 C24 66 18 52 22 40" fill="none" stroke="#34363A" stroke-width="12" stroke-linecap="round"/>
+    <path d="M36 74 C24 66 18 52 22 40" fill="none" stroke="#F7F8F4" stroke-width="6" stroke-linecap="round"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="40" y="96" width="14" height="48" rx="7"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="104" y="96" width="14" height="48" rx="7"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="30" y="62" width="104" height="48" rx="24"/>
+    <ellipse fill="#EAC72E" cx="62" cy="80" rx="18" ry="11"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="56" y="96" width="14" height="48" rx="7"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="120" y="96" width="14" height="48" rx="7"/>
+    <path fill="#73BEBD" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M114 72 C122 78 136 78 144 70 L142 64 C134 70 122 70 116 66 Z"/>
+    <circle fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="140" cy="78" r="5"/>
+    <circle fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="132" cy="46" r="24"/>
+    <ellipse fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="154" cy="56" rx="14" ry="11"/>
+    <circle fill="#34363A" cx="166" cy="51" r="4.5"/>
+    <path d="M152 64 q4 3 9 0" fill="none" stroke="#34363A" stroke-width="2.2" stroke-linecap="round"/>
+    <circle fill="#34363A" cx="138" cy="40" r="3.4"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M118 28 C106 30 104 52 112 62 C120 60 124 42 124 32 Z"/>
+  </symbol>
+
+  <!-- Oveja -->
+  <symbol id="oveja" viewBox="0 0 190 160">
+    <rect fill="#34363A" x="52" y="104" width="11" height="50" rx="5.5"/>
+    <rect fill="#34363A" x="118" y="104" width="11" height="50" rx="5.5"/>
+    <g fill="#34363A">
+      <circle cx="52" cy="76" r="25"/><circle cx="80" cy="62" r="27"/><circle cx="112" cy="62" r="27"/>
+      <circle cx="136" cy="80" r="23"/><circle cx="112" cy="100" r="25"/><circle cx="78" cy="102" r="25"/><circle cx="46" cy="96" r="22"/>
+    </g>
+    <g fill="#F7F8F4">
+      <circle cx="52" cy="76" r="22"/><circle cx="80" cy="62" r="24"/><circle cx="112" cy="62" r="24"/>
+      <circle cx="136" cy="80" r="20"/><circle cx="112" cy="100" r="22"/><circle cx="78" cy="102" r="22"/><circle cx="46" cy="96" r="19"/>
+    </g>
+    <path d="M70 84 q8 -6 16 0 M100 76 q8 -6 16 0 M90 104 q8 -6 16 0" fill="none" stroke="#C8F9E1" stroke-width="4" stroke-linecap="round"/>
+    <rect fill="#34363A" x="66" y="110" width="11" height="44" rx="5.5"/>
+    <rect fill="#34363A" x="132" y="104" width="11" height="50" rx="5.5"/>
+    <ellipse fill="#34363A" cx="160" cy="70" rx="17" ry="23" transform="rotate(-18 160 70)"/>
+    <ellipse fill="#34363A" cx="142" cy="56" rx="12" ry="6" transform="rotate(-30 142 56)"/>
+    <circle fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="152" cy="44" r="12"/>
+    <circle cx="166" cy="64" r="3.6" fill="#F7F8F4"/>
+    <circle cx="166.6" cy="64.4" r="1.6" fill="#34363A"/>
+  </symbol>
+
+  <!-- Vaca -->
+  <symbol id="vaca" viewBox="0 0 240 200">
+    <path d="M42 90 C26 100 22 130 30 150" fill="none" stroke="#34363A" stroke-width="5" stroke-linecap="round"/>
+    <path fill="#34363A" d="M26 146 l8 14 l6 -14 Z"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="48" y="124" width="20" height="62" rx="10"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="150" y="124" width="20" height="62" rx="10"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="36" y="70" width="156" height="84" rx="34"/>
+    <path fill="#34363A" d="M66 74 C84 72 92 92 80 104 C70 112 56 104 54 92 C52 82 56 75 66 74 Z"/>
+    <path fill="#34363A" d="M128 112 C146 106 162 118 156 134 C150 146 128 148 120 136 C116 126 118 116 128 112 Z"/>
+    <path fill="#34363A" d="M150 72 C164 70 172 80 166 90 C160 96 148 92 146 84 Z"/>
+    <path fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M100 152 C100 166 124 166 124 152 Z"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="74" y="128" width="20" height="58" rx="10"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="174" y="124" width="20" height="62" rx="10"/>
+    <path fill="#34363A" d="M48 178 h20 v6 a4 4 0 0 1 -4 4 h-12 a4 4 0 0 1 -4 -4 Z M74 178 h20 v6 a4 4 0 0 1 -4 4 h-12 a4 4 0 0 1 -4 -4 Z M150 178 h20 v6 a4 4 0 0 1 -4 4 h-12 a4 4 0 0 1 -4 -4 Z M174 178 h20 v6 a4 4 0 0 1 -4 4 h-12 a4 4 0 0 1 -4 -4 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M184 34 C176 22 178 12 186 8 C184 18 190 26 196 30 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M222 34 C230 22 228 12 220 8 C222 18 216 26 210 30 Z"/>
+    <ellipse fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="176" cy="52" rx="16" ry="8" transform="rotate(20 176 52)"/>
+    <ellipse fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="230" cy="52" rx="16" ry="8" transform="rotate(-20 230 52)"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="182" y="26" width="42" height="66" rx="20"/>
+    <path fill="#34363A" d="M196 28 C206 34 212 46 206 56 C198 50 192 40 194 28 Z"/>
+    <ellipse fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="203" cy="88" rx="26" ry="18"/>
+    <ellipse fill="#34363A" cx="194" cy="88" rx="3.4" ry="5"/>
+    <ellipse fill="#34363A" cx="212" cy="88" rx="3.4" ry="5"/>
+    <circle fill="#34363A" cx="192" cy="56" r="3.6"/>
+    <circle fill="#34363A" cx="214" cy="56" r="3.6"/>
+  </symbol>
+
+  <!-- Cerdo -->
+  <symbol id="cerdo" viewBox="0 0 170 130">
+    <path d="M30 66 c-10 -4 -12 -16 -4 -18 c8 -2 6 10 -2 8" fill="none" stroke="#34363A" stroke-width="3.5" stroke-linecap="round"/>
+    <rect fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="44" y="88" width="16" height="36" rx="8"/>
+    <rect fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="108" y="88" width="16" height="36" rx="8"/>
+    <ellipse fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="84" cy="74" rx="56" ry="38"/>
+    <rect fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="60" y="92" width="16" height="32" rx="8"/>
+    <rect fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="124" y="88" width="16" height="36" rx="8"/>
+    <path fill="#34363A" d="M44 116 h16 v6 h-16 Z M60 116 h16 v6 h-16 Z M108 116 h16 v6 h-16 Z M124 116 h16 v6 h-16 Z"/>
+    <path fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M118 40 L126 20 L138 40 Z"/>
+    <ellipse fill="#C8F9E1" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="152" cy="68" rx="13" ry="16"/>
+    <ellipse fill="#34363A" cx="149" cy="64" rx="2" ry="3.4"/>
+    <ellipse fill="#34363A" cx="156" cy="72" rx="2" ry="3.4"/>
+    <circle fill="#34363A" cx="132" cy="56" r="3.6"/>
+    <path d="M118 86 q8 6 16 0" fill="none" stroke="#34363A" stroke-width="2.4" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Cabra -->
+  <symbol id="cabra" viewBox="0 0 170 160">
+    <path d="M38 76 l-10 -14" stroke="#34363A" stroke-width="6" stroke-linecap="round"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="44" y="100" width="12" height="54" rx="6"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="106" y="100" width="12" height="54" rx="6"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="34" y="72" width="100" height="44" rx="22"/>
+    <path fill="#EAC72E" d="M54 76 C70 74 80 82 78 92 C64 96 52 92 50 84 Z"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="60" y="104" width="12" height="50" rx="6"/>
+    <rect fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" x="120" y="100" width="12" height="50" rx="6"/>
+    <path fill="#34363A" d="M44 148 h12 v6 h-12 Z M60 148 h12 v6 h-12 Z M106 148 h12 v6 h-12 Z M120 144 h12 v6 h-12 Z"/>
+    <path fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M112 82 L126 46 L146 52 L136 86 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M130 32 C128 16 112 10 104 18 C114 18 122 24 124 36 Z"/>
+    <ellipse fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="120" cy="44" rx="13" ry="6" transform="rotate(24 120 44)"/>
+    <path fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M126 30 C140 26 156 40 158 58 C160 70 150 76 142 72 C132 66 124 48 126 30 Z"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M146 72 L150 92 L140 78 Z"/>
+    <circle fill="#34363A" cx="140" cy="44" r="3.4"/>
+    <ellipse fill="#34363A" cx="154" cy="62" rx="2" ry="3"/>
+  </symbol>
+
+  <!-- Hámster (roedores) -->
+  <symbol id="roedor" viewBox="0 0 110 90">
+    <circle fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="30" cy="26" r="10"/>
+    <circle fill="#C8F9E1" cx="30" cy="26" r="5"/>
+    <path fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M14 84 C4 60 18 24 54 22 C86 20 104 46 100 70 C98 80 92 84 84 84 Z"/>
+    <path fill="#F7F8F4" d="M60 84 C58 64 70 50 84 52 C96 56 98 76 92 84 Z"/>
+    <circle fill="#EAC72E" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="66" cy="24" r="10"/>
+    <circle fill="#C8F9E1" cx="66" cy="24" r="5"/>
+    <circle fill="#34363A" cx="80" cy="46" r="3.6"/>
+    <ellipse fill="#34363A" cx="98" cy="58" rx="3" ry="2.4"/>
+    <path d="M96 64 l12 -2 M96 66 l12 4" stroke="#34363A" stroke-width="1.6" stroke-linecap="round"/>
+    <ellipse fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="66" cy="82" rx="7" ry="4"/>
+    <ellipse fill="#F7F8F4" stroke="#34363A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" cx="34" cy="82" rx="8" ry="4"/>
+  </symbol>
+
+  <!-- Huella -->
+  <symbol id="huella" viewBox="0 0 40 40">
+    <ellipse cx="20" cy="27" rx="9" ry="7.5"/>
+    <ellipse cx="9" cy="16" rx="4" ry="5" transform="rotate(-18 9 16)"/>
+    <ellipse cx="16" cy="9" rx="4" ry="5.2" transform="rotate(-6 16 9)"/>
+    <ellipse cx="24" cy="9" rx="4" ry="5.2" transform="rotate(6 24 9)"/>
+    <ellipse cx="31" cy="16" rx="4" ry="5" transform="rotate(18 31 16)"/>
+  </symbol>
+</svg>

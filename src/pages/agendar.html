@@ -1,0 +1,23 @@
+<!--meta {"title":"Agenda tu cita","description":"Agenda en línea una cita veterinaria o zootécnica a domicilio con AmiZoo, paso a paso.","path":"/agendar","css":["app"],"js":["app","agendar"]} -->
+<section class="agenda" aria-labelledby="agenda-t">
+  <div class="contenedor-estrecho">
+    <div class="agenda__cab">
+      <p class="agenda__paso" data-paso-num>Agenda tu cita</p>
+      <h1 id="agenda-t" data-paso-titulo tabindex="-1">Agenda tu cita</h1>
+      <div class="progreso" role="progressbar" aria-label="Avance de la agenda" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1" data-progreso><span></span></div>
+    </div>
+    <div class="agenda__cuerpo" data-paso-cuerpo>
+      <p class="cargando-texto">{{ico:circle-notch}} Cargando servicios…</p>
+      <noscript>
+        <p class="lead">Para agendar en línea necesitas activar JavaScript. También te agendamos por WhatsApp.</p>
+        <a class="btn btn-primario btn-grande" href="{{wa-msg:Hola AmiZoo, quiero agendar una cita a domicilio.}}">{{ico:whatsapp-logo}} Agendar por WhatsApp</a>
+      </noscript>
+    </div>
+    <p class="error-form" data-error role="alert" hidden></p>
+    <div class="agenda__pie" data-pie>
+      <button class="btn btn-borde btn-grande" type="button" data-atras>{{ico:arrow-left}} Atrás</button>
+      <button class="btn btn-primario btn-grande" type="button" data-seguir>Continuar <span class="flecha">{{ico:arrow-right}}</span></button>
+    </div>
+    <p class="agenda__ayuda">¿Prefieres que te ayudemos? <a href="{{wa-msg:Hola AmiZoo, necesito ayuda para agendar una cita.}}">Escríbenos por WhatsApp</a>. No atendemos urgencias.</p>
+  </div>
+</section>

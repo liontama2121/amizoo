@@ -1,0 +1,230 @@
+<!--meta {"title":"AmiZoo · Médicos veterinarios a domicilio en Bogotá y la Sabana Norte","description":"Médicos veterinarios zootecnistas que van a tu casa o finca: consulta, vacunación, toma de muestras, paseos y asesoría zootécnica en el norte de Bogotá y la Sabana Norte.","path":"/"} -->
+<section class="hero hero--color" aria-labelledby="hero-titulo" data-guia="¡Hola! Soy Amizoo, la mascota de AmiZoo. Salí del maletín de los doctores para acompañarte. Aquí arriba está el botón amarillo para pedir tu cita. Toca Siguiente y te muestro lo demás." data-guia-titulo="Bienvenida">
+  <div class="contenedor hero__grid">
+    <div>
+      <ul class="credenciales" role="list" data-entra="1">
+        <li>{{ico:stethoscope}} Médicos veterinarios zootecnistas</li>
+        <li>{{ico:graduation-cap}} Egresados de la UDCA</li>
+      </ul>
+      <h1 id="hero-titulo" data-entra="2">Diferentes tamaños, misma importancia.</h1>
+      <p class="lead" data-entra="3">El veterinario va a tu casa o finca en Bogotá y la Sabana Norte, con su maletín y todo el cariño.</p>
+      <div class="grupo-botones" data-entra="4">
+        <a class="btn btn-primario btn-grande" href="/agendar">Agenda tu cita <span class="flecha">{{ico:arrow-right}}</span></a>
+        <a class="btn btn-borde btn-grande" href="{{wa}}">{{ico:whatsapp-logo}} WhatsApp</a>
+      </div>
+    </div>
+    <div class="escena-bolso" data-bolso>
+      <div class="escena-bolso__sol" aria-hidden="true"></div>
+      <div class="bolso" role="img" aria-label="El maletín médico de AmiZoo abierto; de él sale Amizoo, el periquito, saludando, rodeado de pequeños animales y medicinas">
+        <div class="bolso__boca"></div>
+        <div class="bolso__ave" data-bolso-ave></div>
+        <div class="bolso__frente">
+          <span class="bolso__emblema"><span class="cruz"></span></span>
+        </div>
+        <div class="bolso__tapa"><span class="bolso__asa"></span><span class="bolso__broche"></span></div>
+        <div class="bolso__zoo" data-bolso-zoo aria-hidden="true"></div>
+        <div class="bolso__globo" data-bolso-globo aria-live="polite">¡Hola! Soy Amizoo 🐾</div>
+      </div>
+      <div class="bolso__sombra" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion maletin-zona" aria-labelledby="maletin-t" data-guia="Este es el maletín de los doctores. Adentro están los 9 servicios con su precio. Toca el que necesites para ver qué incluye y agendarlo." data-guia-titulo="El maletín">
+  <div class="contenedor">
+    <div class="seccion__cabeza centrada">
+      <h2 id="maletin-t">Lo que trae el maletín</h2>
+      <p class="lead">Nueve servicios para animales de compañía y de producción, con el precio a la vista.</p>
+    </div>
+    {{maletin}}
+    <p class="centrado" style="margin-top:2.5rem"><a class="btn btn-borde" href="/servicios">Ver todos los servicios y precios <span class="flecha">{{ico:arrow-right}}</span></a></p>
+  </div>
+</section>
+
+<section class="seccion seccion--menta" aria-labelledby="como-t" data-guia="Pedir la cita es fácil: eliges el servicio, nosotros te confirmamos por correo y el doctor llega a tu casa. Recuerda: no atendemos urgencias." data-guia-titulo="Cómo funciona">
+  <div class="contenedor como">
+    <div class="ruta-visita" data-ruta role="img" aria-label="Ilustración animada: el carro veterinario de AmiZoo sale cuando pides la cita, pasa por la confirmación por correo y llega a la puerta de tu casa">
+      <svg viewBox="0 0 560 460" aria-hidden="true" focusable="false">
+        <rect x="0" y="0" width="560" height="460" rx="34" class="rv-fondo"/>
+        <circle cx="470" cy="70" r="120" class="rv-sol"/>
+        <path d="M0 330 C 120 300 200 360 320 330 S 480 290 560 310 V 460 H 0 Z" class="rv-loma"/>
+        <path d="M0 380 C 140 360 260 410 400 380 S 520 360 560 370 V 460 H 0 Z" class="rv-loma2"/>
+        <g class="rv-arboles">
+          <g transform="translate(190 330)"><rect x="-4" y="0" width="8" height="22" rx="3" class="rv-tronco"/><circle cy="-8" r="20" class="rv-copa"/></g>
+          <g transform="translate(395 205)"><rect x="-3" y="0" width="6" height="18" rx="3" class="rv-tronco"/><circle cy="-6" r="15" class="rv-copa"/></g>
+          <g transform="translate(78 245)"><rect x="-3" y="0" width="6" height="18" rx="3" class="rv-tronco"/><circle cy="-6" r="16" class="rv-copa"/></g>
+        </g>
+        <path id="rv-camino" d="M60 392 C 170 392 165 262 280 262 S 372 166 446 158" class="rv-via"/>
+        <path d="M60 392 C 170 392 165 262 280 262 S 372 166 446 158" class="rv-linea"/>
+        <!-- Casa (destino) -->
+        <g class="rv-casa" transform="translate(470 58)">
+          <rect x="-6" y="34" width="84" height="62" rx="8" class="rv-muro"/>
+          <path d="M-16 40 L36 -4 L88 40 Z" class="rv-techo"/>
+          <rect x="44" y="48" width="22" height="18" rx="4" class="rv-ventana"/>
+          <g class="rv-michi"><circle cx="55" cy="61" r="6" class="rv-cara"/><path d="M50 57 l1 -5 l3 3 M60 57 l-1 -5 l-3 3" class="rv-orejas"/></g>
+          <rect x="6" y="56" width="22" height="40" rx="4" class="rv-hueco"/>
+          <rect x="6" y="56" width="22" height="40" rx="4" class="rv-puerta" data-rv-puerta/>
+          <g class="rv-corazones" data-rv-corazones>
+            <path d="M17 40 c-4 -6 -12 -2 -8 4 l8 7 l8 -7 c4 -6 -4 -10 -8 -4 z"/>
+            <path d="M34 30 c-3 -5 -9 -1 -6 3 l6 5 l6 -5 c3 -4 -3 -8 -6 -3 z"/>
+            <path d="M2 30 c-3 -5 -9 -1 -6 3 l6 5 l6 -5 c3 -4 -3 -8 -6 -3 z"/>
+          </g>
+        </g>
+        <!-- Paradas -->
+        <g class="rv-parada" data-rv-parada="0" transform="translate(70 328)">
+          <circle r="26" class="rv-pin"/><rect x="-9" y="-15" width="18" height="30" rx="4" class="rv-icono"/><circle cy="9" r="2.2" class="rv-punto"/>
+          <g transform="translate(20 -24)"><circle r="12" class="rv-num"/><text y="5" text-anchor="middle">1</text></g>
+        </g>
+        <g class="rv-parada" data-rv-parada="1" transform="translate(262 318)">
+          <circle r="26" class="rv-pin"/><rect x="-13" y="-9" width="26" height="18" rx="3" class="rv-icono"/><path d="M-13 -8 L0 2 L13 -8" class="rv-trazo"/>
+          <g transform="translate(20 -24)"><circle r="12" class="rv-num"/><text y="5" text-anchor="middle">2</text></g>
+        </g>
+        <g class="rv-parada" data-rv-parada="2" transform="translate(392 112)">
+          <circle r="26" class="rv-pin"/><path d="M-12 2 L0 -10 L12 2 V12 H-12 Z" class="rv-icono"/><path d="M0 12 V5" class="rv-trazo"/>
+          <g transform="translate(-22 -22)"><circle r="12" class="rv-num"/><text y="5" text-anchor="middle">3</text></g>
+        </g>
+        <!-- Carro veterinario -->
+        <g class="rv-carro" data-rv-carro transform="translate(60 392)">
+          <g transform="scale(1.3) translate(-34 -40)">
+            <rect x="28" y="0" width="10" height="7" rx="3" class="rv-sirena" data-rv-sirena/>
+            <path d="M4 14 Q4 6 12 6 H46 Q54 6 58 14 L66 24 Q70 26 70 32 V40 Q70 44 66 44 H6 Q2 44 2 40 V18 Q2 14 4 14 Z" class="rv-cuerpo"/>
+            <path d="M46 11 H52 Q55 11 57 15 L62 23 H46 Z" class="rv-vidrio"/>
+            <rect x="10" y="12" width="28" height="12" rx="3" class="rv-vidrio"/>
+            <g class="rv-cruz"><rect x="18" y="28" width="12" height="4" rx="1.5"/><rect x="22" y="24" width="4" height="12" rx="1.5"/></g>
+            <g class="rv-rueda" data-rv-rueda transform="translate(16 44)"><circle r="8"/><circle r="3" class="rv-rin"/><path d="M0 -6 V6 M-6 0 H6" class="rv-rayos"/></g>
+            <g class="rv-rueda" data-rv-rueda transform="translate(54 44)"><circle r="8"/><circle r="3" class="rv-rin"/><path d="M0 -6 V6 M-6 0 H6" class="rv-rayos"/></g>
+          </g>
+        </g>
+      </svg>
+      <ul class="sin-lista" role="list">
+        <li><span class="sin-icono">{{ico:car-profile}}<i class="sin-raya" aria-hidden="true"></i></span> Sin llevarlo en carro</li>
+        <li><span class="sin-icono">{{ico:armchair}}<i class="sin-raya" aria-hidden="true"></i></span> Sin sala de espera</li>
+        <li><span class="sin-icono">{{ico:heart}}</span> En su casa, tranquilo</li>
+      </ul>
+    </div>
+    <div>
+      <h2 id="como-t">Sin transporte, sin salas de espera</h2>
+      <p class="lead">Tu animal se queda donde se siente seguro. El doctor llega.</p>
+      <ol class="pasos" data-anim>
+        <li><div><h3>Pides la cita en línea</h3><p>Eliges servicio, animal, dirección y hora. La separas con $20.000 que se descuentan del valor.</p></div></li>
+        <li><div><h3>Te confirmamos por correo</h3><p>Revisamos tu solicitud y la cita queda en tu calendario con recordatorio.</p></div></li>
+        <li><div><h3>El doctor llega a tu puerta</h3><p>Atendemos con calma en casa. El saldo lo pagas en la visita, en efectivo o con tarjeta.</p></div></li>
+      </ol>
+      <div class="aviso">{{ico:warning}}<p><strong>No atendemos urgencias.</strong> Si tu animal está grave, escríbenos por <a href="{{wa}}">WhatsApp</a> y te orientamos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" aria-labelledby="especies-t" data-guia="Atendemos desde un periquito como yo hasta una vaca. Diferentes tamaños, misma importancia. Abajo ves todas las especies." data-guia-titulo="Especies">
+  <div class="contenedor">
+    <div class="seccion__cabeza centrada">
+      <h2 id="especies-t">Del periquito a la vaca</h2>
+      <p class="lead">Animales de compañía y de producción. Cada servicio indica para qué especies aplica.</p>
+    </div>
+    {{desfile}}
+  </div>
+</section>
+
+<section class="seccion" aria-labelledby="medico-t" data-guia="Para la visita ten a la mano el carné de vacunación y el peso de tu animal. Nosotros llevamos guantes, gasas y alcohol; los medicamentos los compras tú con la fórmula." data-guia-titulo="Antes de la visita">
+  <div class="contenedor dos-col">
+    <div>
+      <h2 id="medico-t">Indicaciones antes de la visita</h2>
+      <p class="lead">Así aprovechamos mejor el tiempo con tu animal.</p>
+      <ul class="lista-check lista-check--anim" role="list" style="margin-top:1.5rem" data-indicaciones>
+        <li><span class="marca-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Ten a la mano el <strong>carné de vacunación</strong> y el <strong>peso actualizado</strong>.</span><span class="ind-ilus" aria-hidden="true">{{ico:identification-card}}{{ico:scales}}</span></li>
+        <li><span class="marca-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Ubica a tu animal en un lugar donde se sienta <strong>cómodo y tranquilo</strong>.</span><span class="ind-ilus" aria-hidden="true">{{ico:bed}}</span></li>
+        <li><span class="marca-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Si hay tratamiento, ten la <strong>fórmula médica</strong> y los medicamentos comprados.</span><span class="ind-ilus" aria-hidden="true">{{ico:prescription}}</span></li>
+      </ul>
+    </div>
+    <div class="bloque bloque--fichas" data-fichas>
+      <h3>{{ico:first-aid-kit}} Lo que llevamos nosotros</h3>
+      <p>La mano calificada para los procedimientos y elementos básicos.</p>
+      <ul class="fichas" role="list" aria-label="Elementos que llevamos">
+        <li>{{ico:hand}} Guantes</li><li>{{ico:bandaids}} Gasas</li><li>{{ico:cloud}} Algodón</li><li>{{ico:drop}} Alcohol</li>
+      </ul>
+      <h3 style="margin-top:1.6rem">{{ico:pill}} Lo que pones tú</h3>
+      <p>Medicamentos y productos específicos. Si necesitas que los llevemos, lo coordinamos y se cotiza aparte.</p>
+      <ul class="fichas fichas--tuyas" role="list" aria-label="Lo que pones tú">
+        <li>{{ico:pill}} Antibióticos</li><li>{{ico:jar}} Cremas</li><li>{{ico:flask}} Soluciones</li><li>{{ico:prescription}} Fórmula médica</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="seccion testimonios-zona" aria-labelledby="testimonios-t" data-guia="Estas son opiniones de familias que ya atendimos. Usa las flechas para ver más." data-guia-titulo="Opiniones">
+  <div class="contenedor">
+    <div class="cabeza-fila">
+      <div class="titulo-puerta">
+        <svg class="puerta-anim" data-puerta viewBox="0 0 120 130" aria-hidden="true" focusable="false">
+          <rect x="18" y="8" width="64" height="112" rx="6" class="pa-marco"/>
+          <rect x="24" y="14" width="52" height="106" rx="3" class="pa-hueco"/>
+          <g class="pa-luz"><path d="M24 14 H76 V120 H24 Z" /></g>
+          <g class="pa-huellas">
+            <g transform="translate(92 112) rotate(-70)"><ellipse rx="5" ry="6"/><circle cx="-5" cy="-8" r="2.4"/><circle cx="0" cy="-10" r="2.4"/><circle cx="5" cy="-8" r="2.4"/></g>
+            <g transform="translate(76 98) rotate(-80)"><ellipse rx="5" ry="6"/><circle cx="-5" cy="-8" r="2.4"/><circle cx="0" cy="-10" r="2.4"/><circle cx="5" cy="-8" r="2.4"/></g>
+            <g transform="translate(60 108) rotate(-75)"><ellipse rx="5" ry="6"/><circle cx="-5" cy="-8" r="2.4"/><circle cx="0" cy="-10" r="2.4"/><circle cx="5" cy="-8" r="2.4"/></g>
+            <g transform="translate(46 96) rotate(-85)"><ellipse rx="5" ry="6"/><circle cx="-5" cy="-8" r="2.4"/><circle cx="0" cy="-10" r="2.4"/><circle cx="5" cy="-8" r="2.4"/></g>
+          </g>
+          <g class="pa-hoja" data-puerta-hoja><rect x="24" y="14" width="52" height="106" rx="3"/><rect x="31" y="22" width="38" height="36" rx="3" class="pa-panel"/><rect x="31" y="66" width="38" height="44" rx="3" class="pa-panel"/><circle cx="68" cy="68" r="3.4" class="pa-pomo"/></g>
+          <path d="M6 120 H114" class="pa-piso"/>
+        </svg>
+        <h2 id="testimonios-t">Familias que ya nos abrieron la puerta</h2>
+      </div>
+      <div class="carrusel-ctrl">
+        <button class="btn-icono" type="button" data-carrusel-ant aria-label="Testimonio anterior">{{ico:arrow-left}}</button>
+        <button class="btn-icono" type="button" data-carrusel-sig aria-label="Testimonio siguiente">{{ico:arrow-right}}</button>
+      </div>
+    </div>
+    {{testimonios}}
+  </div>
+</section>
+
+<section class="seccion" id="zonas" aria-labelledby="zonas-t" data-guia="Escribe tu barrio o municipio en la cajita y te digo si llegamos. Si no aparece, escríbenos por WhatsApp." data-guia-titulo="Zonas">
+  <div class="contenedor zonas">
+    <div>
+      <h2 id="zonas-t">¿Hasta dónde llegamos?</h2>
+      <p class="lead">Norte, occidente y oriente de Bogotá, y los municipios de la Sabana Norte hasta Sopó. La cobertura se confirma según la dirección.</p>
+      {{zonas-buscador}}
+    </div>
+    <div class="zonas__derecha">{{zonas-mapa}}{{zonas-recorridos}}</div>
+  </div>
+</section>
+
+<section class="cta-final" aria-labelledby="cta-t" data-guia="¿Listo? Toca Agenda tu cita y te acompaño paso a paso. Si prefieres, escríbenos por WhatsApp." data-guia-titulo="Tu cita">
+  <div class="contenedor">
+    <div class="cta-final__caja" data-revela>
+      <div>
+        <h2 id="cta-t">¿Agendamos la visita?</h2>
+        <p class="lead">Elige servicio y horario en pocos pasos. Si prefieres, te ayudamos por WhatsApp.</p>
+        <div class="grupo-botones">
+          <a class="btn btn-primario btn-grande" href="/agendar">Agenda tu cita <span class="flecha">{{ico:arrow-right}}</span></a>
+          <a class="btn btn-borde btn-grande" href="{{wa}}">{{ico:whatsapp-logo}} 314 230 0347</a>
+        </div>
+      </div>
+      <div class="cta-calendario" data-calendario aria-hidden="true">
+        <svg viewBox="0 0 240 250" focusable="false">
+          <g class="cal-hojas" data-cal-hojas>
+            <rect x="22" y="40" width="196" height="196" rx="22" class="cal-hoja cal-hoja--atras"/>
+            <rect x="16" y="34" width="196" height="196" rx="22" class="cal-hoja cal-hoja--media"/>
+          </g>
+          <g class="cal-frente" data-cal-frente>
+            <rect x="10" y="28" width="200" height="200" rx="22" class="cal-cuerpo"/>
+            <path d="M10 50 a22 22 0 0 1 22 -22 h156 a22 22 0 0 1 22 22 v18 H10 Z" class="cal-cabeza"/>
+            <text x="110" y="61" text-anchor="middle" class="cal-mes">Tu visita</text>
+            <rect x="58" y="16" width="10" height="26" rx="5" class="cal-anillo"/><rect x="152" y="16" width="10" height="26" rx="5" class="cal-anillo"/>
+            <g class="cal-dia" data-dia="1"><rect x="20" y="84" width="28" height="24" rx="6"/><text x="34" y="101" text-anchor="middle">3</text></g><g class="cal-dia" data-dia="2"><rect x="56" y="84" width="28" height="24" rx="6"/><text x="70" y="101" text-anchor="middle">4</text></g><g class="cal-dia" data-dia="3"><rect x="92" y="84" width="28" height="24" rx="6"/><text x="106" y="101" text-anchor="middle">5</text></g><g class="cal-dia" data-dia="4"><rect x="128" y="84" width="28" height="24" rx="6"/><text x="142" y="101" text-anchor="middle">6</text></g><g class="cal-dia" data-dia="5"><rect x="164" y="84" width="28" height="24" rx="6"/><text x="178" y="101" text-anchor="middle">7</text></g><g class="cal-dia" data-dia="6"><rect x="20" y="114" width="28" height="24" rx="6"/><text x="34" y="131" text-anchor="middle">8</text></g><g class="cal-dia" data-dia="7"><rect x="56" y="114" width="28" height="24" rx="6"/><text x="70" y="131" text-anchor="middle">9</text></g><g class="cal-dia" data-dia="8"><rect x="92" y="114" width="28" height="24" rx="6"/><text x="106" y="131" text-anchor="middle">10</text></g><g class="cal-dia" data-dia="9"><rect x="128" y="114" width="28" height="24" rx="6"/><text x="142" y="131" text-anchor="middle">11</text></g><g class="cal-dia" data-dia="10"><rect x="164" y="114" width="28" height="24" rx="6"/><text x="178" y="131" text-anchor="middle">12</text></g><g class="cal-dia" data-dia="11"><rect x="20" y="144" width="28" height="24" rx="6"/><text x="34" y="161" text-anchor="middle">13</text></g><g class="cal-dia" data-dia="12"><rect x="56" y="144" width="28" height="24" rx="6"/><text x="70" y="161" text-anchor="middle">14</text></g><g class="cal-dia" data-dia="13"><rect x="92" y="144" width="28" height="24" rx="6"/><text x="106" y="161" text-anchor="middle">15</text></g><g class="cal-dia" data-dia="14"><rect x="128" y="144" width="28" height="24" rx="6"/><text x="142" y="161" text-anchor="middle">16</text></g><g class="cal-dia" data-dia="15"><rect x="164" y="144" width="28" height="24" rx="6"/><text x="178" y="161" text-anchor="middle">17</text></g><g class="cal-dia" data-dia="16"><rect x="20" y="174" width="28" height="24" rx="6"/><text x="34" y="191" text-anchor="middle">18</text></g><g class="cal-dia" data-dia="17"><rect x="56" y="174" width="28" height="24" rx="6"/><text x="70" y="191" text-anchor="middle">19</text></g><g class="cal-dia" data-dia="18"><rect x="92" y="174" width="28" height="24" rx="6"/><text x="106" y="191" text-anchor="middle">20</text></g><g class="cal-dia" data-dia="19"><rect x="128" y="174" width="28" height="24" rx="6"/><text x="142" y="191" text-anchor="middle">21</text></g><g class="cal-dia" data-dia="20"><rect x="164" y="174" width="28" height="24" rx="6"/><text x="178" y="191" text-anchor="middle">22</text></g>
+            <path d="M124 150 c4 -14 36 -16 39 2 c3 16 -29 22 -39 10 c-6 -8 0 -18 11 -20" class="cal-circulo" data-cal-circulo/>
+            <g transform="translate(190 206)"><g class="cal-sello" data-cal-sello>
+              <circle r="24"/><path d="M-11 0 l7 7 l14 -15" class="cal-chulo"/>
+            </g></g>
+          </g>
+          <g class="cal-corazones" data-cal-corazones>
+            <path d="M200 40 c-4 -6 -12 -2 -8 4 l8 7 l8 -7 c4 -6 -4 -10 -8 -4 z"/>
+            <path d="M222 70 c-3 -5 -9 -1 -6 3 l6 5 l6 -5 c3 -4 -3 -8 -6 -3 z"/>
+            <path d="M28 20 c-3 -5 -9 -1 -6 3 l6 5 l6 -5 c3 -4 -3 -8 -6 -3 z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>

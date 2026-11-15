@@ -1,0 +1,147 @@
+{
+  "actualizado": "2026-11-14",
+  "bienvenida": "¡Hola! Te doy la bienvenida a AMIZOO. Soy AMIZOO, tu asistente virtual. Estoy aquí para ayudarte a encontrar el servicio que necesitas, resolver tus dudas y acompañarte en el proceso de agendamiento. 🐾 ¡Cuéntame! ¿Cómo puedo ayudarte hoy? 😊",
+  "noSe": "¡Uy! Parece que esa pregunta se me escapó volando. 💚 No tengo esa información con certeza y prefiero no darte una respuesta equivocada. ¡Pero no te preocupes! Nuestro equipo de profesionales MVZ estará encantado de ayudarte y resolver tus dudas.\n📲 ¡Hablemos por WhatsApp! 👉 https://wa.me/573142300347",
+  "sugeridas": ["animales", "zonas", "precios-agenda", "domicilio", "plan-preventiva", "vacunacion"],
+  "grupos": [
+    { "id": "general", "titulo": "Sobre AmiZoo y el domicilio" },
+    { "id": "especies", "titulo": "Animales que atendemos" },
+    { "id": "servicios", "titulo": "Servicios" },
+    { "id": "planes", "titulo": "Planes y membresías" }
+  ],
+  "preguntas": [
+    {
+      "id": "animales",
+      "grupo": "especies",
+      "pregunta": "¿Qué animales atiende AMIZOO?",
+      "claves": ["animales", "especies", "atienden", "que animales", "mascotas", "cuales animales"],
+      "respuesta": "En AMIZOO atendemos diferentes especies, porque para nosotros todos los animales son importantes. Nuestros servicios están dirigidos a perros, gatos, aves, roedores y animales de producción como bovinos, ovinos, caprinos y porcinos.\n\nTen presente que no todos los servicios están disponibles para todas las especies. Si nos cuentas qué animal tienes y qué necesitas, te orientaremos."
+    },
+    {
+      "id": "perros-gatos",
+      "grupo": "especies",
+      "pregunta": "¿Atienden perros y gatos?",
+      "claves": ["perro", "perros", "gato", "gatos", "perrito", "gatito", "canino", "felino"],
+      "respuesta": "¡Por supuesto! 🐶🐱 Ofrecemos diferentes servicios para perros y gatos, entre ellos:\n- Consulta veterinaria general\n- Vacunación\n- Toma de muestras\n- Paseos caninos (solo perros)\n- Asesoría nutricional virtual\n- Asesoría en enriquecimiento ambiental\n- Asistencia en tratamientos y administración de medicamentos formulados\n- Asistencia neonatal"
+    },
+    {
+      "id": "aves-roedores",
+      "grupo": "especies",
+      "pregunta": "¿Atienden aves y roedores?",
+      "claves": ["ave", "aves", "pajaro", "loro", "periquito", "cacatua", "roedor", "roedores", "hamster", "conejo", "cobayo", "curi"],
+      "respuesta": "¡Sí! 🐦 Atendemos aves y ofrecemos servicios para roedores, de acuerdo con la especie y las necesidades del paciente.\n\nPara aves contamos con consulta general, toma de muestras, asesoría nutricional virtual, asesoría en enriquecimiento ambiental y otros servicios según el caso.\n\nPara roedores ofrecemos consulta general y asesoría nutricional virtual.\n\nSi necesitas otro procedimiento, podemos verificar si está disponible."
+    },
+    {
+      "id": "produccion",
+      "grupo": "especies",
+      "pregunta": "¿Atienden animales de producción?",
+      "claves": ["produccion", "finca", "vaca", "vacas", "bovino", "bovinos", "oveja", "ovino", "cabra", "caprino", "cerdo", "porcino", "gallinas", "ganado"],
+      "respuesta": "¡Claro que sí! 🐄🐑 También trabajamos con animales de producción, como bovinos, ovinos, caprinos, porcinos y aves.\n\nOfrecemos consulta general, toma de muestras, asesoría zootécnica presencial y asesoría en enriquecimiento ambiental para las especies correspondientes."
+    },
+    {
+      "id": "consulta",
+      "grupo": "servicios",
+      "pregunta": "¿Qué incluye una consulta veterinaria general?",
+      "claves": ["consulta", "consulta general", "revision", "chequeo", "valoracion", "examen"],
+      "respuesta": "Es un servicio de valoración médica veterinaria realizado por un profesional competente, orientado a evaluar el estado general de salud del animal, identificar posibles alteraciones y establecer recomendaciones, tratamientos o procedimientos según el criterio profesional.\n\nSi durante la consulta se identifica la necesidad de realizar procedimientos, exámenes o tratamientos adicionales, el profesional te explicará las recomendaciones y los costos correspondientes."
+    },
+    {
+      "id": "vacunacion",
+      "grupo": "servicios",
+      "pregunta": "¿Realizan vacunación a domicilio?",
+      "claves": ["vacuna", "vacunas", "vacunacion", "vacunar", "rabia", "biologico"],
+      "respuesta": "¡Sí! 💉 Realizamos vacunación a domicilio para perros y gatos. Los biológicos y esquemas de vacunación se determinan según la especie, edad, antecedentes y estado de salud del paciente.\n\nPara consultar tarifas y disponibilidad, contáctanos: https://wa.me/573142300347"
+    },
+    {
+      "id": "muestras",
+      "grupo": "servicios",
+      "pregunta": "¿Realizan toma de muestras de laboratorio?",
+      "claves": ["muestra", "muestras", "laboratorio", "examenes", "sangre", "hemograma", "cuadro hematico"],
+      "respuesta": "¡Sí! 🧪 Realizamos toma de muestras en perros, gatos, aves, bovinos, ovinos, caprinos y porcinos.\n\nEl tipo de muestra y los exámenes disponibles dependen de las necesidades del paciente y del análisis solicitado por el profesional."
+    },
+    {
+      "id": "paseos",
+      "grupo": "servicios",
+      "pregunta": "¿Ofrecen paseos para perros?",
+      "claves": ["paseo", "paseos", "pasear", "caminar", "paseador"],
+      "respuesta": "¡Sí! 🐕 En AMIZOO ofrecemos paseos caninos para contribuir al bienestar y la actividad física de tu perro. La disponibilidad se coordina de acuerdo con tus necesidades y la zona de atención.\n\n¿Quieres solicitar un paseo? Escríbenos: https://wa.me/573142300347"
+    },
+    {
+      "id": "nutricional",
+      "grupo": "servicios",
+      "pregunta": "¿Qué es una asesoría nutricional?",
+      "claves": ["nutricion", "nutricional", "alimentacion", "comida", "dieta", "concentrado", "virtual"],
+      "respuesta": "🥗 Es un servicio de orientación nutricional virtual, en el que brindamos recomendaciones de alimentación de acuerdo con las características y necesidades de cada paciente. Está dirigido a perros, gatos, aves y roedores."
+    },
+    {
+      "id": "zootecnica",
+      "grupo": "servicios",
+      "pregunta": "¿Qué es una asesoría zootécnica?",
+      "claves": ["zootecnica", "zootecnia", "productividad", "manejo", "crianza"],
+      "respuesta": "🐄 Es un servicio presencial de orientación profesional enfocado en el manejo, la alimentación, el bienestar y la productividad de los animales. Está dirigido a bovinos, ovinos, caprinos, porcinos y aves."
+    },
+    {
+      "id": "enriquecimiento",
+      "grupo": "servicios",
+      "pregunta": "¿Qué es la asesoría en enriquecimiento ambiental?",
+      "claves": ["enriquecimiento", "ambiental", "comportamiento", "juguetes", "aburrido", "estimulacion"],
+      "respuesta": "🌿 Es un servicio presencial que busca mejorar el bienestar de los animales mediante recomendaciones y estrategias para estimular sus comportamientos naturales, favorecer su actividad y enriquecer el entorno donde viven.\n\nEstá disponible para perros, gatos, ovinos, caprinos, porcinos y aves."
+    },
+    {
+      "id": "medicamentos",
+      "grupo": "servicios",
+      "pregunta": "¿Administran medicamentos y realizan curaciones?",
+      "claves": ["medicamento", "medicamentos", "inyeccion", "tratamiento", "formula", "pastillas", "aplicar"],
+      "respuesta": "¡Sí! 💚 Ofrecemos asistencia en tratamientos y administración de medicamentos, siempre que exista una fórmula médica veterinaria previa. Podemos realizar actividades como:\n- Administración de medicamentos formulados por vía oral, tópica, intramuscular o subcutánea, según indicación\n- Limpieza de heridas y curaciones sencillas\n- Limpieza externa de oídos y ojos cuando esté indicada\n- Apoyo en tratamientos dermatológicos\n- Seguimiento de tratamientos prescritos\n\nEl procedimiento depende de la condición del paciente y de las indicaciones del médico veterinario.\n\nRecuerda que nosotros llevamos la mano calificada para los procedimientos y elementos básicos como guantes, gasas, algodón y alcohol; sin embargo, NO llevamos de manera habitual medicamentos ni productos específicos, como antibióticos, cremas o soluciones. El propietario debe comprarlos previamente y tenerlos disponibles al momento de la visita.\n\nSi necesitas que AMIZOO suministre algún producto específico, debes coordinarlo previamente con nuestro equipo. Su costo se cotizará por separado."
+    },
+    {
+      "id": "heridas",
+      "grupo": "servicios",
+      "pregunta": "¿Puedo solicitar una limpieza de heridas o una curación?",
+      "claves": ["herida", "heridas", "curacion", "curaciones", "limpieza", "corte", "lastimado"],
+      "respuesta": "¡Sí! Realizamos limpieza de heridas y curaciones sencillas, siempre que las condiciones del paciente lo permitan. El servicio requiere valoración de las condiciones de la herida y, cuando corresponda, una indicación veterinaria.\n\nLos medicamentos y productos específicos deben estar disponibles en el domicilio.\n\nSi tu animal presenta una herida grave, sangrado abundante o un deterioro importante, comunícate con nuestro equipo para recibir orientación sobre la atención adecuada."
+    },
+    {
+      "id": "plan-preventiva",
+      "grupo": "planes",
+      "pregunta": "¿Qué es el Plan de Medicina Preventiva?",
+      "claves": ["plan", "preventiva", "medicina preventiva", "anual", "plan anual"],
+      "respuesta": "Es un plan dirigido exclusivamente a pacientes adultos, diseñado para favorecer el seguimiento periódico de su salud. Incluye:\n- Controles veterinarios cada tres meses\n- Vacunación\n- Desparasitación\n\nLa aplicación de los servicios se ajusta a las necesidades y antecedentes de cada paciente.\n\nPara conocer las condiciones y tarifas, escríbenos: https://wa.me/573142300347"
+    },
+    {
+      "id": "membresias",
+      "grupo": "planes",
+      "pregunta": "¿Ofrecen planes de Medicina Prepagada o membresías mensuales?",
+      "claves": ["prepagada", "membresia", "membresias", "mensual", "hamster", "puma", "manati"],
+      "respuesta": "¡Sí! 💚 Contamos con planes de membresía mensual dirigidos a pequeñas especies. Cada categoría tiene diferentes beneficios y servicios incluidos. Las condiciones, coberturas y tarifas dependen del plan seleccionado.\n\nSi deseas conocer las opciones disponibles, contáctanos por WhatsApp: https://wa.me/573142300347"
+    },
+    {
+      "id": "diferencia-planes",
+      "grupo": "planes",
+      "pregunta": "¿Cuál es la diferencia entre el Plan de Medicina Preventiva y las membresías mensuales?",
+      "claves": ["diferencia", "comparar", "cual plan", "planes"],
+      "respuesta": "¡Son dos opciones diferentes!\n- Plan de Medicina Preventiva: está dirigido a pacientes adultos e incluye controles cada tres meses, vacunación y desparasitación.\n- Membresías mensuales: son planes con diferentes categorías y beneficios de servicios para pequeñas especies.\n\nCada uno tiene sus propias condiciones y tarifas. Para conocerlos, escríbenos: https://wa.me/573142300347"
+    },
+    {
+      "id": "domicilio",
+      "grupo": "general",
+      "pregunta": "¿Tienen servicios a domicilio?",
+      "claves": ["domicilio", "casa", "a domicilio", "van a la casa", "sede", "direccion", "consultorio", "clinica"],
+      "respuesta": "¡Sí! 🚗 Todos nuestros servicios presenciales se realizan en el domicilio o la ubicación donde se encuentre el animal. La asesoría nutricional se presta de manera virtual.\n\nAsí evitamos que tengas que desplazarte con tu animal para recibir atención."
+    },
+    {
+      "id": "zonas",
+      "grupo": "general",
+      "pregunta": "¿En qué zonas presta sus servicios AMIZOO?",
+      "claves": ["zona", "zonas", "cobertura", "barrio", "barrios", "donde", "sopo", "chia", "cajica", "norte", "municipio"],
+      "respuesta": "Actualmente tenemos cobertura en Bogotá norte y nororiental, desde la Calle 72 hacia el norte, y en municipios de la Sabana Norte de Cundinamarca hasta Sopó.\n\nLa cobertura y disponibilidad se verifican según la dirección del servicio."
+    },
+    {
+      "id": "precios-agenda",
+      "grupo": "general",
+      "pregunta": "¿Cuánto cuestan los servicios y cómo puedo agendar una cita?",
+      "claves": ["precio", "precios", "cuanto", "cuesta", "valor", "tarifa", "costo", "agendar", "cita", "reservar", "pedir cita"],
+      "respuesta": "¡En AMIZOO queremos ayudarte! 🐾 Las tarifas dependen del servicio solicitado, la especie, las características del paciente y la ubicación donde se realizará la atención.\n\nPara conocer el precio, consultar disponibilidad o coordinar una visita, puedes revisar nuestro sitio web en el apartado de \"Servicios\" o comunicarte directamente con nuestro equipo por WhatsApp: https://wa.me/573142300347"
+    }
+  ]
+}

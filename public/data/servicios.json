@@ -1,0 +1,115 @@
+{
+  "actualizado": "2026-11-14",
+  "nota": "Fuente de respaldo. En Fase 2 la página lee /api/servicios (D1) y usa este archivo solo si la API no responde.",
+  "servicios": [
+    {
+      "id": "consulta-general",
+      "nombre": "Consulta general",
+      "icono": "estetoscopio",
+      "descripcion": "Valoramos el estado de salud de tu animal mediante un examen clínico y una evaluación profesional, brindándote orientación y recomendaciones para su bienestar.",
+      "especies": ["perros", "gatos", "aves", "roedores", "bovinos", "caprinos", "ovinos", "porcinos"],
+      "duracionMin": 45,
+      "duracionTexto": "45 min",
+      "modalidad": "domicilio",
+      "precio": { "tipo": "zona", "bogota": 85000, "fueraBogota": 110000 },
+      "visible": true
+    },
+    {
+      "id": "paseo-canino",
+      "nombre": "Paseo canino",
+      "icono": "correa",
+      "descripcion": "Promovemos la actividad física, exploración y estimulación de tu perro mediante paseos adaptados a sus características y necesidades. Incluye hidratación, limpieza de pulpejos y cepillado.",
+      "especies": ["perros"],
+      "duracionMin": 90,
+      "duracionTexto": "1 h 30 min (1 h de paseo + 30 min de cuidados)",
+      "modalidad": "domicilio",
+      "precio": { "tipo": "zona", "bogota": 40000, "fueraBogota": 70000 },
+      "visible": true
+    },
+    {
+      "id": "vacunacion",
+      "nombre": "Vacunación",
+      "icono": "jeringa",
+      "descripcion": "Protegemos la salud de tu animal mediante la aplicación de vacunas y el seguimiento de esquemas de vacunación, de acuerdo con su edad, antecedentes y necesidades (esquema vacunal completo perros y gatos).",
+      "especies": ["perros", "gatos"],
+      "duracionMin": 30,
+      "duracionTexto": "30 min",
+      "modalidad": "domicilio",
+      "precio": { "tipo": "rango", "desde": 34900, "hasta": 99300, "domicilioAparte": true },
+      "visible": true
+    },
+    {
+      "id": "toma-muestras",
+      "nombre": "Toma de muestras de laboratorio",
+      "icono": "tubo",
+      "descripcion": "Realizamos la recolección de muestras biológicas para apoyar los procesos de diagnóstico, evaluación y seguimiento de la salud de tu animal.",
+      "especies": ["perros", "gatos", "ovinos", "caprinos", "bovinos", "porcinos", "aves"],
+      "duracionMin": 30,
+      "duracionTexto": "30 min",
+      "modalidad": "domicilio",
+      "precio": { "tipo": "rango", "desde": 55600, "hasta": 332400, "domicilioAparte": true },
+      "visible": true
+    },
+    {
+      "id": "asesoria-zootecnica",
+      "nombre": "Asesoría presencial zootécnica",
+      "icono": "granero",
+      "descripcion": "Brindamos orientación profesional sobre alimentación, manejo, bienestar y productividad animal, buscando mejorar las condiciones de crianza y producción.",
+      "especies": ["ovinos", "caprinos", "bovinos", "porcinos", "aves"],
+      "duracionMin": 300,
+      "duracionTexto": "2 a 5 horas",
+      "modalidad": "domicilio",
+      "precio": { "tipo": "fijo", "valor": 200000 },
+      "visible": true
+    },
+    {
+      "id": "asesoria-nutricional",
+      "nombre": "Asesoría virtual nutricional",
+      "icono": "plato",
+      "descripcion": "Ofrecemos orientación nutricional personalizada para ayudarte a elegir y ajustar la alimentación de tu animal según su especie, etapa de vida y necesidades particulares.",
+      "especies": ["perros", "gatos", "aves", "roedores"],
+      "duracionMin": 30,
+      "duracionTexto": "30 min (virtual)",
+      "modalidad": "virtual",
+      "precio": { "tipo": "fijo", "valor": 70000 },
+      "visible": true
+    },
+    {
+      "id": "enriquecimiento",
+      "nombre": "Asesoría presencial de enriquecimiento",
+      "icono": "pelota",
+      "descripcion": "Diseñamos recomendaciones y estrategias para estimular los comportamientos naturales de los animales, promover su actividad y mejorar su entorno y bienestar.",
+      "especies": ["perros", "gatos", "ovinos", "caprinos", "porcinos", "aves"],
+      "duracionMin": 60,
+      "duracionTexto": "1 hora",
+      "modalidad": "domicilio",
+      "precio": { "tipo": "fijo", "valor": 60000 },
+      "visible": true
+    },
+    {
+      "id": "tratamientos-casa",
+      "nombre": "Asistencia en tratamientos en casa",
+      "icono": "curita",
+      "descripcion": "Acompañamos los tratamientos prescritos por el médico veterinario mediante administración de medicamentos, curaciones sencillas, limpieza externa de oídos y ojos cuando esté indicada y seguimiento de tratamientos.",
+      "nota": "Requiere fórmula médica veterinaria previa. Los medicamentos y productos específicos los suministra el propietario.",
+      "especies": ["perros", "gatos", "ovinos", "caprinos", "porcinos", "aves"],
+      "duracionMin": 40,
+      "duracionTexto": "40 min",
+      "modalidad": "domicilio",
+      "precio": { "tipo": "zona", "bogota": 55000, "fueraBogota": 80000 },
+      "visible": true
+    },
+    {
+      "id": "neonatologia",
+      "nombre": "Asistencia en neonatología",
+      "icono": "biberon",
+      "descripcion": "Acompañamiento y cuidado de animales recién nacidos mediante orientación en alimentación, estimulación para la eliminación de heces y valoración clínica, para favorecer su desarrollo y bienestar en esta etapa.",
+      "especies": ["perros", "gatos", "porcinos", "aves"],
+      "duracionMin": 60,
+      "duracionTexto": "1 hora",
+      "modalidad": "domicilio",
+      "precio": { "tipo": "zona", "bogota": 120000, "fueraBogota": 150000 },
+      "visible": true
+    }
+  ]
+}

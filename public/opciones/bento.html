@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opción B · Bento suave | AmiZoo</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  body { background: var(--marfil); background-image: none; }
+  .ease { transition-timing-function: cubic-bezier(.32,.72,0,1); }
+
+  /* Isla de navegación flotante */
+  .isla { position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 60;
+    display: flex; align-items: center; gap: .4rem; padding: .45rem .45rem .45rem 1rem;
+    background: color-mix(in srgb, var(--marfil) 82%, transparent); backdrop-filter: blur(18px) saturate(1.3);
+    border-radius: 999px; box-shadow: 0 1px 0 color-mix(in srgb, var(--grafito) 8%, transparent), 0 18px 40px -22px color-mix(in srgb, var(--grafito) 45%, transparent);
+    width: max-content; max-width: calc(100vw - 24px); }
+  .isla img { height: 34px; width: auto; }
+  .isla nav { display: none; }
+  .isla nav a { font-family: var(--f-titulo); font-weight: 700; font-size: .98rem; text-decoration: none; padding: .55rem .8rem; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center; transition: background-color .5s cubic-bezier(.32,.72,0,1); }
+  .isla nav a:hover { background: var(--menta); }
+  @media (min-width: 1000px) { .isla nav { display: flex; } }
+
+  /* Botón con ícono anidado */
+  .btn-isla { display: inline-flex; align-items: center; gap: .8rem; min-height: 54px; padding: .35rem .4rem .35rem 1.4rem;
+    border-radius: 999px; background: var(--mango); color: var(--grafito); text-decoration: none;
+    font-family: var(--f-titulo); font-weight: 800; font-size: 1.05rem; border: 0;
+    box-shadow: 0 14px 30px -16px color-mix(in srgb, var(--grafito) 55%, transparent);
+    transition: transform .6s cubic-bezier(.32,.72,0,1); }
+  .btn-isla .nucleo { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: color-mix(in srgb, var(--grafito) 12%, transparent);
+    transition: transform .6s cubic-bezier(.32,.72,0,1); }
+  .btn-isla:hover .nucleo { transform: translate(3px,-1px) scale(1.06); }
+  .btn-isla:active { transform: scale(.98); }
+  .btn-isla.claro { background: var(--marfil); }
+  .btn-isla.peq { min-height: 46px; font-size: .98rem; padding-left: 1.1rem; }
+  .btn-isla.peq .nucleo { width: 36px; height: 36px; }
+
+  /* Doble bisel */
+  .bisel { padding: 8px; border-radius: 2.25rem; background: color-mix(in srgb, var(--grafito) 5%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--grafito) 7%, transparent); }
+  .bisel > .nucleo { border-radius: calc(2.25rem - 8px); height: 100%; padding: clamp(1.4rem, 3vw, 2.2rem);
+    box-shadow: inset 0 1px 1px color-mix(in srgb, var(--marfil) 60%, transparent), 0 20px 40px -30px color-mix(in srgb, var(--grafito) 50%, transparent); }
+
+  .hero-b { min-height: 100dvh; display: grid; align-content: center; padding: 8rem 0 4rem;
+    background: radial-gradient(70% 60% at 85% 20%, var(--menta), transparent 70%), radial-gradient(50% 50% at 10% 90%, var(--mango-suave), transparent 70%), var(--marfil); }
+  .hero-b__grid { display: grid; gap: 2.5rem; align-items: center; }
+  @media (min-width: 960px) { .hero-b__grid { grid-template-columns: 1.05fr .95fr; } }
+  .hero-b h1 { font-size: clamp(2.8rem, 6.4vw + .5rem, 6rem); letter-spacing: -0.04em; line-height: .98; max-width: 11ch; }
+  .hero-b .lead { max-width: 36ch; margin-bottom: 2rem; }
+  .escena { background: var(--turquesa); position: relative; overflow: hidden; min-height: 420px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .escena .fila { display: flex; align-items: flex-end; justify-content: center; gap: 4%; padding: 0 4%; }
+  .escena .fila svg { flex: none; }
+  .escena .suelo { height: 16px; background: var(--mango); margin: -4px -2.2rem -2.2rem; }
+  .escena .tag { position: absolute; top: 1.4rem; left: 1.4rem; background: var(--marfil); border-radius: 999px; padding: .45rem 1rem; font-family: var(--f-titulo); font-weight: 800; font-size: .95rem; }
+  .escena .tag2 { left: auto; right: 1.4rem; top: auto; bottom: 5.5rem; background: var(--mango); transform: rotate(3deg); }
+
+  .seccion-b { padding-block: clamp(5rem, 10vw, 9rem); }
+  .bento { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 900px) {
+    .bento { grid-template-columns: repeat(12, 1fr); grid-auto-rows: minmax(150px, auto); }
+    .b-1 { grid-column: span 7; grid-row: span 2; }
+    .b-2 { grid-column: span 5; }
+    .b-3 { grid-column: span 5; }
+    .b-4 { grid-column: span 4; }
+    .b-5 { grid-column: span 4; }
+    .b-6 { grid-column: span 4; }
+  }
+  .bento h3 { font-size: clamp(1.5rem, 1.6vw + 1rem, 2.2rem); letter-spacing: -0.03em; }
+  .b-1 .nucleo { background: var(--turquesa); display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; }
+  .b-2 .nucleo { background: var(--mango); }
+  .b-3 .nucleo { background: var(--menta); }
+  .b-4 .nucleo, .b-5 .nucleo, .b-6 .nucleo { background: var(--marfil); }
+  .precio-xl { font-family: var(--f-titulo); font-weight: 800; font-size: clamp(3rem, 6vw, 5.2rem); letter-spacing: -0.05em; line-height: .9; font-variant-numeric: tabular-nums; }
+  .lista-serv { list-style: none; padding: 0; margin: 0; display: grid; gap: .1rem; }
+  .lista-serv li { display: flex; justify-content: space-between; gap: 1rem; padding: .7rem 0; border-bottom: 1px solid color-mix(in srgb, var(--grafito) 14%, transparent); font-weight: 600; }
+  .lista-serv li span:last-child { font-family: var(--f-titulo); font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .pasos-b { list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; counter-reset: p; }
+  .pasos-b li { display: grid; grid-template-columns: 40px 1fr; gap: .8rem; align-items: start; counter-increment: p; line-height: 1.4; }
+  .pasos-b li::before { content: counter(p); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--marfil); font-family: var(--f-titulo); font-weight: 800; }
+  .mini-especies { display: flex; gap: .6rem; align-items: flex-end; flex-wrap: wrap; margin-top: 1rem; }
+  .mini-especies svg { height: 52px; width: auto; }
+  .cita { font-size: 1.1rem; line-height: 1.55; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .js .sube { opacity: 0; transform: translateY(48px); filter: blur(8px); transition: opacity .9s cubic-bezier(.32,.72,0,1), transform 1s cubic-bezier(.32,.72,0,1), filter .9s cubic-bezier(.32,.72,0,1); }
+    .js .sube.visible { opacity: 1; transform: none; filter: none; }
+    .js .sube:nth-child(2) { transition-delay: .08s; } .js .sube:nth-child(3) { transition-delay: .16s; }
+    .js .sube:nth-child(4) { transition-delay: .24s; } .js .sube:nth-child(5) { transition-delay: .32s; } .js .sube:nth-child(6) { transition-delay: .4s; }
+  }
+  .cierre { text-align: center; }
+  .cierre h2 { font-size: clamp(2.4rem, 5vw, 4.5rem); letter-spacing: -0.04em; max-width: 14ch; margin-inline: auto; }
+  .ave-hero { position: absolute; left: 6%; top: 18%; width: clamp(110px, 16vw, 190px); z-index: 2; transform-origin: 50% 100%; }
+  .globo { position: absolute; left: calc(6% + clamp(110px, 16vw, 190px)); top: 14%; background: var(--marfil); border-radius: 22px 22px 22px 6px; padding: .7rem 1rem; font-family: var(--f-titulo); font-weight: 800; font-size: 1.1rem; line-height: 1.25; box-shadow: 0 14px 30px -18px color-mix(in srgb, var(--grafito) 60%, transparent); }
+  .globo span { font-weight: 700; font-size: .95rem; }
+  .escena { min-height: 480px; }
+  .escena .tag { display: none; }
+  .escena .tag2 { display: block; top: 1.4rem; bottom: auto; }
+  @media (prefers-reduced-motion: no-preference) { .ave-hero { animation: hola 2.4s cubic-bezier(.32,.72,0,1) infinite; } }
+  @keyframes hola { 0%,100% { transform: none; } 20% { transform: rotate(-6deg) translateY(-6px); } 40% { transform: rotate(3deg); } }
+  .b-2 .nucleo { position: relative; }
+  .b-2 .posado { position: absolute; right: 18px; top: -46px; width: 52px; }
+</style>
+</head>
+<body>
+<header class="isla">
+  <img src="/assets/logos/logo-horizontal-480.png" width="480" height="181" alt="AmiZoo">
+  <nav aria-label="Principal"><a href="#">Servicios</a><a href="#">Planes</a><a href="#">Nosotros</a><a href="#">Preguntas</a></nav>
+  <a class="btn-isla peq" href="/agendar">Agenda tu cita <span class="nucleo"><svg class="ico-sm" aria-hidden="true"><use href="/assets/img/iconos.svg#i-flecha"/></svg></span></a>
+</header>
+
+<main>
+  <section class="hero-b">
+    <div class="contenedor hero-b__grid">
+      <div>
+        <h1>Diferentes tamaños, misma importancia.</h1>
+        <p class="lead">Servicio veterinario y zootécnico a domicilio, con la confianza y el cariño que tu animal merece.</p>
+        <div class="grupo-botones">
+          <a class="btn-isla" href="/agendar">Agenda tu cita <span class="nucleo"><svg class="ico-sm" aria-hidden="true"><use href="/assets/img/iconos.svg#i-flecha"/></svg></span></a>
+          <a class="btn btn-borde" href="https://wa.me/573142300347"><svg class="ico-sm" aria-hidden="true"><use href="/assets/img/iconos.svg#i-whatsapp"/></svg> WhatsApp</a>
+        </div>
+      </div>
+      <div class="bisel">
+        <div class="nucleo escena">
+          <span class="tag">A domicilio · Bogotá y Sabana Norte</span>
+          <span class="tag tag2">Lunes a viernes</span>
+          <svg class="ave-hero" viewBox="0 0 110 130" role="img" aria-label="Amizoo, el periquito de AmiZoo, saludando"><use href="/assets/img/animales.svg#ave-saluda"/></svg>
+          <div class="globo">¡Hola! Soy Amizoo 🐾<br><span>Vamos a tu casa.</span></div>
+          <div class="fila" aria-hidden="true">
+            
+            <svg viewBox="0 0 120 130" style="width:13%"><use href="/assets/img/animales.svg#gato"/></svg>
+            <svg viewBox="0 0 170 150" style="width:20%"><use href="/assets/img/animales.svg#perro"/></svg>
+            <svg viewBox="0 0 240 200" style="width:34%"><use href="/assets/img/animales.svg#vaca"/></svg>
+          </div>
+          <div class="suelo"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-b">
+    <div class="contenedor">
+      <h2 style="max-width:16ch;font-size:clamp(2.2rem,4vw,3.6rem);letter-spacing:-0.035em;margin-bottom:2.5rem">Todo lo que necesitas, sin salir de casa.</h2>
+      <div class="bento">
+        <article class="bisel b-1 sube"><div class="nucleo">
+          <div><h3>Consulta general</h3><p>Examen clínico completo en casa, con orientación y recomendaciones para su bienestar. 45 min.</p></div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem">
+            <div><span style="font-weight:600">En Bogotá</span><div class="precio-xl">$85.000</div><span style="font-weight:600">Fuera de Bogotá $110.000</span></div>
+            <a class="btn-isla claro" href="/agendar?servicio=consulta-general">Agendar <span class="nucleo"><svg class="ico-sm" aria-hidden="true"><use href="/assets/img/iconos.svg#i-flecha"/></svg></span></a>
+          </div>
+        </div></article>
+        <article class="bisel b-2 sube"><div class="nucleo">
+          <svg class="posado" viewBox="0 0 90 120" aria-hidden="true"><use href="/assets/img/animales.svg#ave"/></svg><h3>Pide tu cita en 3 pasos</h3>
+          <ol class="pasos-b"><li>Eliges servicio, animal y hora.</li><li>Te confirmamos por correo.</li><li>Vamos a tu casa o finca.</li></ol>
+        </div></article>
+        <article class="bisel b-3 sube"><div class="nucleo">
+          <h3>Más servicios</h3>
+          <ul class="lista-serv"><li><span>Paseo canino</span><span>$40.000</span></li><li><span>Vacunación</span><span>desde $34.900</span></li><li><span>Asesoría nutricional virtual</span><span>$70.000</span></li></ul>
+        </div></article>
+        <article class="bisel b-4 sube"><div class="nucleo">
+          <h3>Del sofá a la finca</h3>
+          <p>Perros, gatos, aves, roedores y animales de producción.</p>
+          <div class="mini-especies" aria-hidden="true">
+            <svg viewBox="0 0 110 90"><use href="/assets/img/animales.svg#roedor"/></svg>
+            <svg viewBox="0 0 170 130"><use href="/assets/img/animales.svg#cerdo"/></svg>
+            <svg viewBox="0 0 190 160"><use href="/assets/img/animales.svg#oveja"/></svg>
+          </div>
+        </div></article>
+        <article class="bisel b-5 sube"><div class="nucleo">
+          <p class="cita">“El agendar la cita fue muy sencillo. Los recomiendo totalmente.”</p>
+          <strong>Cindy Ríos</strong> · Shrek y Fiona (cacatúas)
+        </div></article>
+        <article class="bisel b-6 sube"><div class="nucleo">
+          <h3>No atendemos urgencias</h3>
+          <p>Si tu animal está grave, escríbenos por WhatsApp y te orientamos.</p>
+        </div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-b cierre" style="background:var(--menta)">
+    <div class="contenedor">
+      <h2>Queremos conocer a tu animal.</h2>
+      <a class="btn-isla" href="/agendar" style="margin-top:1rem">Agenda tu cita <span class="nucleo"><svg class="ico-sm" aria-hidden="true"><use href="/assets/img/iconos.svg#i-flecha"/></svg></span></a>
+    </div>
+  </section>
+</main>
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: .15 });
+  document.querySelectorAll('.sube').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!--meta {"title":"Mi cuenta","description":"Portal de clientes de AmiZoo: tus animales, su historia clínica y tus citas.","path":"/mi-cuenta","noindex":true,"css":["app"],"js":["app","portal"]} -->
+<section class="portal" aria-labelledby="portal-t">
+  <div class="contenedor">
+    <div class="portal__cab">
+      <div>
+        <p class="eyebrow">Mi cuenta</p>
+        <h1 id="portal-t" data-saludo>Hola</h1>
+      </div>
+      <div class="grupo-botones grupo-botones--chico">
+        <button class="btn btn-borde" type="button" data-ver-tour>{{ico:compass}} Recorrido con Amizoo</button>
+        <a class="btn btn-primario btn-grande" href="/agendar" data-tour-agendar>{{ico:calendar-plus}} Agendar cita</a>
+      </div>
+    </div>
+    <nav class="pestanas" aria-label="Secciones de mi cuenta">
+      <a href="#inicio" data-tab="inicio">{{ico:house}}<span>Inicio</span></a>
+      <a href="#animales" data-tab="animales">{{ico:paw-print}}<span>Mis animales</span></a>
+      <a href="#citas" data-tab="citas">{{ico:calendar-check}}<span>Mis citas</span></a>
+      <a href="#historia" data-tab="historia">{{ico:first-aid-kit}}<span>Historia clínica</span></a>
+      <a href="#datos" data-tab="datos">{{ico:user}}<span>Mis datos</span></a>
+    </nav>
+    <div class="vista" data-vista tabindex="-1"><p class="cargando-texto">{{ico:circle-notch}} Cargando tu cuenta…</p></div>
+  </div>
+</section>

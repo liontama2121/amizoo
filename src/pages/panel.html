@@ -1,0 +1,13 @@
+<!--meta {"title":"Panel","description":"Panel de control de AmiZoo.","path":"/panel","noindex":true,"layout":"panel","css":["app"],"js":["app","panel"]} -->
+<div class="panel">
+  <nav class="panel__nav" aria-label="Secciones del panel">
+    <a href="#inicio" data-tab="inicio">{{ico:house}}<span>Inicio</span></a>
+    <a href="#solicitudes" data-tab="solicitudes">{{ico:bell-ringing}}<span>Solicitudes</span><b class="globito" data-cuenta-pend hidden></b></a>
+    <a href="#agenda" data-tab="agenda">{{ico:calendar-dots}}<span>Agenda</span></a>
+    <a href="#clientes" data-tab="clientes">{{ico:users-three}}<span>Clientes</span></a>
+    <a href="#servicios" data-tab="servicios">{{ico:first-aid-kit}}<span>Servicios</span></a>
+    <a href="#config" data-tab="config">{{ico:gear-six}}<span>Configuración</span></a>
+    <a href="#cuenta" data-tab="cuenta">{{ico:user-circle-gear}}<span>Mi cuenta</span></a>
+  </nav>
+  <div class="panel__vista" data-vista tabindex="-1"><p class="cargando-texto">{{ico:circle-notch}} Cargando…</p></div>
+</div>

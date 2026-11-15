@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opción D · Mapa de vuelo | AmiZoo</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  .hero-m { background: var(--turquesa); overflow: hidden; }
+  .hero-m__grid { display: grid; gap: 2rem; align-items: center; padding-block: clamp(2.5rem, 5vw, 4rem); }
+  @media (min-width: 1000px) { .hero-m__grid { grid-template-columns: .9fr 1.1fr; } }
+  .hero-m h1 { font-size: clamp(2.6rem, 5vw + .6rem, 5rem); max-width: 12ch; }
+  .hero-m .lead { max-width: 36ch; margin-bottom: 1.6rem; }
+  .mapa { background: var(--marfil); border: 3px solid var(--grafito); border-radius: 40px; overflow: hidden; box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--grafito) 60%, transparent); position: relative; }
+  .mapa svg.plano { display: block; width: 100%; height: auto; }
+  .mapa .leyenda { position: absolute; left: 14px; bottom: 14px; background: var(--marfil); border: 2px solid var(--grafito); border-radius: 999px; padding: .35rem .9rem; font-family: var(--f-titulo); font-weight: 800; font-size: .9rem; }
+  .plano text { font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; fill: #34363A; }
+  .plano .via text { font-family: "Open Sans", sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .08em; }
+
+  .paradas-h { display: flex; gap: .8rem; overflow-x: auto; padding: .5rem 0 1rem; scroll-snap-type: x mandatory; list-style: none; margin: 0; }
+  .paradas-h li { scroll-snap-align: start; flex: 0 0 min(300px, 80vw); background: var(--marfil); border: 2px solid var(--grafito); border-radius: 26px; padding: 1.3rem; display: grid; gap: .4rem; }
+  .paradas-h li:nth-child(odd) { background: var(--menta); }
+  .paradas-h .n { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--mango); border: 2px solid var(--grafito); font-family: var(--f-titulo); font-weight: 800; }
+  .paradas-h strong { font-family: var(--f-titulo); font-size: 1.3rem; line-height: 1.2; }
+  .paradas-h .p { font-family: var(--f-titulo); font-weight: 800; font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a class="marca" href="/opciones/"><img src="/assets/logos/logo-horizontal-480.png" width="480" height="181" alt="AmiZoo"></a>
+    <div class="cabecera__acciones">
+      <a class="btn btn-borde btn-cuenta" href="#">Mi cuenta</a>
+      <a class="btn btn-primario" href="/agendar">Agenda tu cita</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="hero-m">
+    <div class="contenedor hero-m__grid">
+      <div>
+        <span class="sticker"><span class="punto"><svg class="ico-sm" aria-hidden="true"><use href="/assets/img/iconos.svg#i-casa"/></svg></span> Sin sede: volamos a tu casa</span>
+        <h1>Diferentes tamaños, misma importancia.</h1>
+        <p class="lead">Servicio veterinario y zootécnico a domicilio, con la confianza y el cariño que tu animal merece.</p>
+        <div class="grupo-botones">
+          <a class="btn btn-primario btn-grande" href="/agendar"><svg class="ico-sm" aria-hidden="true"><use href="/assets/img/iconos.svg#i-calendario"/></svg> Agenda tu cita</a>
+          <a class="btn btn-borde btn-grande" href="#barrio">¿Llegamos a tu barrio?</a>
+        </div>
+      </div>
+      <figure class="mapa" style="margin:0">
+        <svg class="plano" viewBox="0 0 600 500" role="img" aria-label="Mapa esquemático de la cobertura de AmiZoo: del oriente y norte de Bogotá hasta Sopó, con Amizoo volando entre los barrios">
+          <rect width="600" height="500" fill="#F7F8F4"/>
+          <!-- Cerros orientales -->
+          <path d="M520 500 C540 420 500 380 540 300 C570 240 540 160 580 80 L600 60 L600 500 Z" fill="#C8F9E1" stroke="#34363A" stroke-width="2"/>
+          <!-- Manzanas -->
+          <g fill="#C8F9E1" opacity=".55">
+            <rect x="40" y="250" width="70" height="50" rx="10"/><rect x="130" y="250" width="70" height="50" rx="10"/><rect x="40" y="320" width="70" height="60" rx="10"/>
+            <rect x="130" y="320" width="70" height="60" rx="10"/><rect x="230" y="330" width="80" height="50" rx="10"/><rect x="330" y="400" width="80" height="60" rx="10"/>
+            <rect x="230" y="160" width="80" height="60" rx="10"/><rect x="330" y="160" width="70" height="60" rx="10"/><rect x="420" y="160" width="60" height="60" rx="10"/>
+            <rect x="330" y="250" width="70" height="60" rx="10"/><rect x="420" y="250" width="60" height="60" rx="10"/><rect x="230" y="250" width="80" height="60" rx="10"/>
+            <rect x="420" y="400" width="70" height="60" rx="10"/><rect x="230" y="400" width="80" height="60" rx="10"/>
+          </g>
+          <!-- Vías -->
+          <g class="via" stroke="#34363A" stroke-width="7" stroke-linecap="round" fill="none" opacity=".18">
+            <path d="M0 230 H520"/><path d="M0 390 H530"/><path d="M215 120 V500"/><path d="M410 120 V500"/><path d="M120 120 C160 180 120 260 120 500"/>
+          </g>
+          <g class="via"><text x="18" y="222">CALLE 100</text><text x="18" y="382">CALLE 72</text><text x="420" y="140">AV. 7</text></g>
+          <!-- Sabana Norte -->
+          <path d="M0 0 H600 V110 H0 Z" fill="#EAC72E" opacity=".35"/>
+          <text x="22" y="40">SABANA NORTE</text>
+          <text x="22" y="62" style="font-size:12px;font-weight:600;font-family:'Open Sans'">hasta Sopó</text>
+          <!-- Ruta -->
+          <path id="vuelo" d="M470 440 C420 400 380 360 360 300 C340 240 280 270 260 210 C240 150 150 210 160 160 C170 110 300 80 470 60" fill="none" stroke="#EAC72E" stroke-width="10" stroke-linecap="round"/>
+          <path d="M470 440 C420 400 380 360 360 300 C340 240 280 270 260 210 C240 150 150 210 160 160 C170 110 300 80 470 60" fill="none" stroke="#34363A" stroke-width="3" stroke-dasharray="10 10" stroke-linecap="round"/>
+          <!-- Paradas -->
+          <g stroke="#34363A" stroke-width="3" fill="#F7F8F4">
+            <circle cx="470" cy="440" r="10"/><circle cx="360" cy="300" r="10"/><circle cx="260" cy="210" r="10"/><circle cx="160" cy="160" r="10"/><circle cx="470" cy="60" r="12" fill="#73BEBD"/>
+          </g>
+          <g>
+            <text x="378" y="470">Chapinero Alto</text><text x="374" y="296">Chicó Norte</text><text x="274" y="206">Cedritos</text><text x="60" y="150">Niza</text><text x="490" y="66">Sopó</text>
+          </g>
+          <!-- Animales en casa -->
+          <use href="/assets/img/animales.svg#gato" x="440" y="395" width="34" height="38"/>
+          <use href="/assets/img/animales.svg#perro" x="300" y="300" width="56" height="50"/>
+          <use href="/assets/img/animales.svg#vaca" x="500" y="70" width="80" height="66"/>
+          <!-- Amizoo volando -->
+          <g id="ave-vuelo">
+            <use href="/assets/img/animales.svg#ave-vuela" x="-45" y="-50" width="90" height="68"/>
+            <animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 .05 .35 1">
+              <mpath href="#vuelo"/>
+            </animateMotion>
+          </g>
+        </svg>
+        <span class="leyenda">Mapa esquemático · sin escala</span>
+      </figure>
+    </div>
+  </section>
+  <div class="franja" aria-hidden="true"><p>Amizoo vuela de lunes a viernes, 8:00 a.&nbsp;m. a 6:00 p.&nbsp;m.</p></div>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <h2>Cada servicio es una parada</h2>
+      <ul class="paradas-h" role="list">
+        <li><span class="n">1</span><strong>Consulta general</strong><span>45 min · en casa</span><span class="p">$85.000</span></li>
+        <li><span class="n">2</span><strong>Vacunación</strong><span>30 min · + domicilio</span><span class="p">desde $34.900</span></li>
+        <li><span class="n">3</span><strong>Paseo canino</strong><span>1 h 30 min</span><span class="p">$40.000</span></li>
+        <li><span class="n">4</span><strong>Asesoría zootécnica</strong><span>2 a 5 h · en finca</span><span class="p">$200.000</span></li>
+        <li><span class="n">5</span><strong>Asesoría nutricional</strong><span>30 min · virtual</span><span class="p">$70.000</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+<script>
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const a = document.querySelector('#ave-vuelo animateMotion'); a?.setAttribute('repeatCount', '0'); a?.remove();
+    document.querySelector('#ave-vuelo')?.setAttribute('transform', 'translate(260 205)');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!--meta {"title":"Crear cuenta","description":"Crea tu cuenta de AmiZoo para agendar citas a domicilio y seguir la salud de tus animales.","path":"/registro","noindex":true,"css":["app"],"js":["app","cuenta"]} -->
+<section class="acceso" aria-labelledby="t" data-guia="Con tu cuenta puedes agendar más rápido, ver tus citas y la historia clínica de tus animales. Llena tus datos, inventa una contraseña de al menos 8 letras o números y toca Crear mi cuenta." data-guia-titulo="Crear cuenta">
+  <div class="contenedor acceso__grid">
+    <div class="acceso__caja">
+      <h1 id="t">Crea tu cuenta</h1>
+      <p class="lead-sm">Toma un minuto. Así agendas más rápido y ves todo en un solo lugar.</p>
+      <form data-form="registro">
+        <label class="campo-f"><span>Nombre completo</span><input name="nombre" autocomplete="name" minlength="2" maxlength="100" required></label>
+        <label class="campo-f"><span>Correo</span><input type="email" name="correo" autocomplete="email" inputmode="email" required></label>
+        <label class="campo-f"><span>Celular</span><input type="tel" name="telefono" autocomplete="tel" inputmode="tel" placeholder="Ej: 300 123 4567" required></label>
+        <label class="campo-f"><span>Contraseña <small>(mínimo 8 caracteres)</small></span>
+          <span class="campo-clave"><input type="password" name="clave" autocomplete="new-password" minlength="8" maxlength="128" required><button type="button" class="ver-clave" data-ver-clave aria-pressed="false">{{ico:eye}} Ver</button></span>
+        </label>
+        <label class="casilla"><input type="checkbox" name="aceptaDatos" required> <span>Autorizo el tratamiento de mis datos personales según la <a href="/politica-de-datos" target="_blank">política de datos</a>.</span></label>
+        <p class="error-form" data-error role="alert" hidden></p>
+        <button class="btn btn-primario btn-grande btn-bloque" type="submit">Crear mi cuenta <span class="flecha">{{ico:arrow-right}}</span></button>
+      </form>
+      <p class="acceso__alterno">¿Ya tienes cuenta? <a class="btn btn-borde" href="/entrar">Entrar</a></p>
+    </div>
+    <div class="acceso__foto">{{foto:perro-abrazo-2:prioridad mitad:Una persona abraza a su perro}}</div>
+  </div>
+</section>

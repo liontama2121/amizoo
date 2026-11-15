@@ -1,0 +1,28 @@
+{
+  "actualizado": "2026-11-14",
+  "preventiva": {
+    "id": "medicina-preventiva",
+    "nombre": "Plan de Medicina Preventiva",
+    "pago": "Pago anual",
+    "condicion": "Solo pacientes adultos",
+    "incluye": [
+      "4 consultas generales al año (una cada 3 meses)",
+      "1 desparasitación interna y externa",
+      "Vacunación anual: rabia + tos de perreras (perros) o rabia + triple felina (gatos)",
+      "1 cuadro hemático"
+    ],
+    "precios": [
+      { "especie": "Perros", "valor": 520000 },
+      { "especie": "Gatos", "valor": 485000 }
+    ]
+  },
+  "membresias": {
+    "titulo": "Membresías mensuales de Medicina Prepagada",
+    "para": "Pequeñas especies",
+    "planes": [
+      { "id": "hamster", "nombre": "Hámster", "precioMensual": null, "beneficios": [] },
+      { "id": "puma", "nombre": "Puma", "precioMensual": null, "beneficios": [] },
+      { "id": "manati", "nombre": "Manatí", "precioMensual": null, "beneficios": [] }
+    ]
+  }
+}

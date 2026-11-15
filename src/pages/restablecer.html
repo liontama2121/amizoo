@@ -1,0 +1,18 @@
+<!--meta {"title":"Nueva contraseña","description":"Crea una contraseña nueva para tu cuenta de AmiZoo.","path":"/restablecer","noindex":true,"css":["app"],"js":["app","cuenta"]} -->
+<section class="acceso" aria-labelledby="t" data-guia="Escribe tu contraseña nueva dos veces, igualitas, y toca Guardar. Después entras directo a tu cuenta." data-guia-titulo="Nueva contraseña">
+  <div class="contenedor acceso__grid acceso__grid--solo">
+    <div class="acceso__caja">
+      <h1 id="t">Crea tu contraseña</h1>
+      <p class="lead-sm">Usa al menos 8 caracteres. Mejor si es una frase fácil de recordar.</p>
+      <form data-form="restablecer">
+        <label class="campo-f"><span>Contraseña nueva</span>
+          <span class="campo-clave"><input type="password" name="clave" autocomplete="new-password" minlength="8" maxlength="128" required><button type="button" class="ver-clave" data-ver-clave aria-pressed="false">{{ico:eye}} Ver</button></span>
+        </label>
+        <label class="campo-f"><span>Repite la contraseña</span><input type="password" name="repetir" autocomplete="new-password" minlength="8" maxlength="128" required></label>
+        <p class="error-form" data-error role="alert" hidden></p>
+        <button class="btn btn-primario btn-grande btn-bloque" type="submit">Guardar y entrar</button>
+      </form>
+      <p class="acceso__enlaces"><a href="/recuperar">Pedir un enlace nuevo</a></p>
+    </div>
+  </div>
+</section>

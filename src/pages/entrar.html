@@ -1,0 +1,20 @@
+<!--meta {"title":"Entrar","description":"Entra a tu cuenta de AmiZoo para ver tus citas y la historia clínica de tus animales.","path":"/entrar","noindex":true,"css":["app"],"js":["app","cuenta"]} -->
+<section class="acceso" aria-labelledby="t" data-guia="Escribe el correo y la contraseña con los que creaste tu cuenta. Si no la recuerdas, toca ¿Olvidaste tu contraseña? y te mandamos un enlace al correo." data-guia-titulo="Entrar">
+  <div class="contenedor acceso__grid">
+    <div class="acceso__caja">
+      <h1 id="t">Entra a tu cuenta</h1>
+      <p class="lead-sm">Mira tus citas, tus animales y su historia clínica.</p>
+      <form data-form="entrar">
+        <label class="campo-f"><span>Correo</span><input type="email" name="correo" autocomplete="email" inputmode="email" required></label>
+        <label class="campo-f"><span>Contraseña</span>
+          <span class="campo-clave"><input type="password" name="clave" autocomplete="current-password" required><button type="button" class="ver-clave" data-ver-clave aria-pressed="false">{{ico:eye}} Ver</button></span>
+        </label>
+        <p class="error-form" data-error role="alert" hidden></p>
+        <button class="btn btn-primario btn-grande btn-bloque" type="submit">Entrar <span class="flecha">{{ico:arrow-right}}</span></button>
+      </form>
+      <p class="acceso__enlaces"><a href="/recuperar">¿Olvidaste tu contraseña?</a></p>
+      <p class="acceso__alterno">¿Es tu primera vez? <a class="btn btn-borde" href="/registro">Crear mi cuenta</a></p>
+    </div>
+    <div class="acceso__foto">{{foto:gato-manta:prioridad mitad:Gato descansando sobre una manta}}</div>
+  </div>
+</section>

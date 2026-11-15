@@ -1,0 +1,19 @@
+{
+  "name": "amizoo",
+  "private": true,
+  "type": "module",
+  "description": "AmiZoo — sitio, agenda en línea, portal de clientes y panel (Cloudflare Pages + Functions + D1 + R2)",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && wrangler pages dev public",
+    "test": "node --test scripts/",
+    "db:local": "wrangler d1 migrations apply amizoo --local",
+    "db:remoto": "wrangler d1 migrations apply amizoo --remote",
+    "semilla": "node scripts/semilla.mjs",
+    "admin": "node scripts/crear-admin.mjs",
+    "demo": "node scripts/datos-demo.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.162.0"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "title": "Elige el mundo visual de AmiZoo",
+  "question": "Nueva tirada (las 6 direcciones anteriores quedan eliminadas). La tirada asignó el Álbum de láminas. Quédate con ella, toma una alternativa o vuelve a tirar.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Álbum de láminas AmiZoo",
+      "kicker": "THE ROLL",
+      "lineage": "Álbumes de láminas coleccionables (el Mundial en Colombia)",
+      "thesis": "Cada animal y cada servicio es una lámina numerada con foto real; tu animal entra al álbum.",
+      "palette": ["#F7F8F4", "#73BEBD", "#EAC72E", "#34363A", "#C8F9E1"],
+      "materials": ["láminas con foto real y borde marfil", "brillo mango para la lámina especial", "páginas de álbum con casillas numeradas"],
+      "viewport": "Portada del álbum: título enorme, Amizoo como lámina 01 brillante, botón Agenda tu cita como la lámina que falta.",
+      "risk": "Puede leerse juvenil si las láminas no usan fotos reales y tipografía sobria.",
+      "raised": [
+        { "from": "challenger-teletext", "raise": "Cada servicio lleva su número de lámina, se busca por número como una página." },
+        { "from": "challenger-manifesto", "raise": "Los títulos pegan fuerte: bloques de texto a escala total, sin timidez." }
+      ],
+      "wireframe": { "cols": 12, "rows": 10, "regions": [
+        { "label": "portada del álbum + título", "x": 0, "y": 0, "w": 7, "h": 6, "accent": true },
+        { "label": "lámina 01 Amizoo", "x": 7, "y": 0, "w": 5, "h": 6 },
+        { "label": "página de láminas: servicios numerados", "x": 0, "y": 6, "w": 12, "h": 4 }
+      ] }
+    },
+    {
+      "id": "model-pick",
+      "label": "La puerta de la nevera",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "La nevera familiar con fotos de las mascotas y recordatorios",
+      "thesis": "La casa es la sede: el sitio es la puerta de la nevera donde vive la cita de AmiZoo.",
+      "palette": ["#F7F8F4", "#C8F9E1", "#73BEBD", "#EAC72E", "#34363A"],
+      "materials": ["fotos instantáneas con imanes de colores", "tarjeta de recordatorio de cita", "papel con cinta"],
+      "viewport": "Puerta de nevera marfil con fotos de mascotas sujetas por imanes y la tarjeta Próxima cita como botón principal.",
+      "risk": "Familiar: los collages de fotos son comunes en sitios de mascotas.",
+      "wireframe": { "cols": 12, "rows": 10, "regions": [
+        { "label": "título + eslogan", "x": 0, "y": 0, "w": 6, "h": 4 },
+        { "label": "fotos con imanes", "x": 6, "y": 0, "w": 6, "h": 7 },
+        { "label": "tarjeta Próxima cita (CTA)", "x": 0, "y": 4, "w": 6, "h": 3, "accent": true },
+        { "label": "notas de servicios", "x": 0, "y": 7, "w": 12, "h": 3 }
+      ] }
+    },
+    {
+      "id": "challenger-paper",
+      "label": "Desfile de papel recortado",
+      "verdict": "competitive",
+      "lineage": "Autómatas de papel con manivela",
+      "thesis": "Una procesión de animales de papel recortado, del periquito a la vaca, que avanza al girar la manivela.",
+      "palette": ["#F7F8F4", "#C8A97E", "#34363A", "#EAC72E"],
+      "materials": ["papel blanco recortado", "cartón kraft", "sombra grafito"],
+      "viewport": "Procesión de figuras de papel por tamaño; la manivela es el scroll y cada figura abre su servicio.",
+      "case": "Encaja perfecto con el eslogan, pero vuelve a la ilustración que rechazaste.",
+      "risk": "Vuelve a verse ilustrado o infantil.",
+      "hero": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-crank-paper-menagerie-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-crank-paper-menagerie.webp"
+    },
+    {
+      "id": "challenger-skate",
+      "label": "Pared de tablas",
+      "verdict": "competitive",
+      "lineage": "Pared de tablas en una tienda de skate",
+      "thesis": "Los servicios cuelgan como tablas altas en una pared; tomas una y la volteas para ver precio y detalle.",
+      "palette": ["#73BEBD", "#F7F8F4", "#34363A", "#EAC72E"],
+      "materials": ["tablas altas a sangre", "lija grafito al reverso", "etiqueta de precio en el riel"],
+      "viewport": "Fila de tablas verticales con fotos a sangre; la tabla elegida se voltea y muestra el precio.",
+      "case": "La paleta encaja casi exacta, pero esconder precios tras un volteo es difícil para mayores.",
+      "risk": "Muy juvenil para clientes mayores.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-skate-deck-wall-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/pop-culture-shelf-skate-deck-wall.webp"
+    },
+    {
+      "id": "challenger-teletext",
+      "label": "Teletexto",
+      "verdict": "declined",
+      "lineage": "Revistas de teletexto",
+      "thesis": "Páginas numeradas en una cuadrícula de caracteres sobre negro.",
+      "palette": ["#000000", "#FFFF00", "#00FFFF", "#FFFFFF"],
+      "materials": ["mosaico de bloques", "grilla 40x24"],
+      "viewport": "Índice P100 con servicios numerados.",
+      "case": "Fondo negro contradice el texto grafito sobre claro; nadie la identifica con veterinaria.",
+      "kept": "Navegar por número de servicio.",
+      "risk": "Retro sin sentido para el público.",
+      "hero": "https://impeccable.style/worlds/cards/broadcast-programming-teletext-service-hero.webp"
+    },
+    {
+      "id": "challenger-manifesto",
+      "label": "Manifiesto tipográfico",
+      "verdict": "declined",
+      "lineage": "Revista manifiesto de 1914",
+      "thesis": "Todo en tipos de madera gigantes, sin fotos.",
+      "palette": ["#D9B8B0", "#111111"],
+      "materials": ["tipos de madera", "reglas negras"],
+      "viewport": "Bloques de texto rotados que gritan.",
+      "case": "Sin fotos ni animales: pierde confianza y claridad.",
+      "kept": "Títulos a escala total.",
+      "risk": "Agresivo e ilegible para mayores.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-blast-manifesto-page-hero.webp"
+    },
+    {
+      "id": "challenger-shader",
+      "label": "Portal WebGL",
+      "verdict": "declined",
+      "lineage": "Estudios experienciales",
+      "thesis": "Fondo de shader vivo con texto fino flotando.",
+      "palette": ["#0B1F2A", "#73BEBD"],
+      "materials": ["shader", "grano"],
+      "viewport": "Pantalla completa animada.",
+      "case": "Lento, oscuro y poco accesible; contrario al pedido del cliente.",
+      "kept": "Una sola transición memorable.",
+      "risk": "Inaccesible.",
+      "hero": "https://impeccable.style/worlds/cards/webgl-shader-portal-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "El estándar de la categoría",
+    "thesis": "Lo que hacen las veterinarias, hecho impecable: foto, servicios y confianza.",
+    "palette": ["#F7F8F4", "#34363A", "#73BEBD", "#EAC72E"],
+    "materials": ["grilla limpia", "fotografía de producto"],
+    "viewport": "Hero con foto, tarjetas de servicios y testimonios.",
+    "risk": "Igual a la competencia por diseño."
+  },
+  "steer": true
+}

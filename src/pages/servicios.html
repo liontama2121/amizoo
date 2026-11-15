@@ -1,0 +1,37 @@
+<!--meta {"title":"Servicios y precios","description":"Consulta general, vacunación, toma de muestras, paseo canino, asesorías y asistencia en tratamientos a domicilio. Precios para Bogotá y fuera de Bogotá.","path":"/servicios"} -->
+<section class="portada" data-guia="Aquí están todos los servicios con su precio. El precio cambia si estás en Bogotá o fuera de Bogotá." data-guia-titulo="Servicios" aria-labelledby="t">
+  <div class="contenedor portada__grid">
+    <div>
+    <h1 id="t">Servicios y precios</h1>
+    <p class="lead">Todo lo hacemos en tu casa o finca, excepto la asesoría nutricional, que es por videollamada. El precio depende de la zona donde está tu animal.</p>
+    </div>
+    <div class="portada__foto">{{foto:perro-abrazo-2:prioridad mitad:Dos personas abrazan a su perro en un camino rural}}</div>
+  </div>
+</section>
+
+<section class="seccion" aria-label="Lista de servicios" data-guia="Toca el animal que tienes y te muestro solo sus servicios. Luego toca Agendar en el que necesites." data-guia-titulo="Elige tu animal">
+  <div class="contenedor">
+    {{servicios-filtro}}
+    {{servicios-lista}}
+    <div class="aviso" style="margin-top:2.5rem">
+      {{ico:warning}}
+      <p><strong>Así se calcula el precio:</strong> “Bogotá” y “Fuera de Bogotá” dependen de la dirección donde se presta el servicio. Para separar tu cita pedimos un anticipo de $20.000 que se descuenta del valor total; el saldo lo pagas en la visita en efectivo o con tarjeta. <strong>No atendemos urgencias.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" aria-labelledby="cta-t">
+  <div class="contenedor">
+    <div class="cta-final__caja" data-revela>
+    <div>
+      <h2 id="cta-t">¿No sabes cuál elegir?</h2>
+      <p class="lead">Cuéntanos qué le pasa a tu animal y te recomendamos el servicio adecuado.</p>
+      <div class="grupo-botones">
+        <a class="btn btn-primario btn-grande" href="{{wa-msg:Hola AmiZoo, necesito ayuda para elegir un servicio.}}">{{ico:whatsapp-logo}} Pregúntanos por WhatsApp</a>
+        <a class="btn btn-borde btn-grande" href="/agendar">{{ico:calendar-check}} Agenda tu cita</a>
+      </div>
+    </div>
+      <div class="cta-final__ave">{{foto:periquito-3::Amizoo, periquito australiano}}</div>
+    </div>
+  </div>
+</section>

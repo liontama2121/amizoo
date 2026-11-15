@@ -6,7 +6,7 @@ pages_build_output_dir = "public"
 [[d1_databases]]
 binding = "DB"
 database_name = "amizoo"
-database_id = "759f8e99-8233-4639-83f9-f5e50ab8516e"
+database_id = "99d76165-2f5b-4a55-94e8-f6b0a8b809b9"
 migrations_dir = "migrations"
 
 [[r2_buckets]]

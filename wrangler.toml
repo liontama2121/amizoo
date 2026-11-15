@@ -1,12 +1,12 @@
-name = "amizoo"
+﻿name = "amizoo"
 compatibility_date = "2026-10-01"
 pages_build_output_dir = "public"
 
-# Bindings (se crean en Fase 2)
+# Bindings
 [[d1_databases]]
 binding = "DB"
 database_name = "amizoo"
-database_id = "REEMPLAZAR_CON_ID_DE_D1"
+database_id = "759f8e99-8233-4639-83f9-f5e50ab8516e"
 migrations_dir = "migrations"
 
 [[r2_buckets]]

@@ -36,7 +36,7 @@ Mobile, at-home care that joins companion-animal medicine with zootechnical advi
 - Vacunación and toma de muestras show "+ domicilio (te confirmamos el valor)"; the surcharge is never shown.
 - Asesoría nutricional is virtual (no address step).
 - Login is own email+password; never "Sign in with Google".
-- Undecided: Nequi/Daviplata/transfer data, Hámster/Puma/Manatí membership prices, legal texts, David's T.P., team photos, official mascot illustration, coverage zone vs. "Calle 72 hacia el norte" conflict, domain (amizoovet).
+- Undecided: Nequi/Daviplata/transfer data, Hámster/Puma/Manatí membership prices, legal texts, team photos, official mascot illustration, coverage zone vs. "Calle 72 hacia el norte" conflict, domain (amizoovet).
 
 ## Brand Commitments
 

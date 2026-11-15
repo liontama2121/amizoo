@@ -23,8 +23,10 @@ Se trabaja por fases; mostrar resultado de cada fase y esperar visto bueno antes
 - Dirección visual v3 "El maletín de visita" (2026-11-14, elegida tras rechazar v1 ilustrada y v2 editorial): fotos reales, íconos Phosphor, maletín médico animado con los servicios. Ver DESIGN.md.
 - Mascota Amizoo: periquito vectorial animado con anime.js (public/assets/js/amizoo.js) que guía con data-guia en cada sección; usar data-guia en cada paso de la agenda y del portal. Se puede reemplazar el dibujo por la ilustración oficial manteniendo las partes con clase ave-*.
 
+- No mostrar números de tarjeta profesional (T.P.) del equipo (pedido del cliente, 2026-11-14).
+
 ## Pendientes del cliente (no inventar)
-Fotos del equipo/animales e ilustración oficial de la mascota · T.P. de David · Nequi/Daviplata/transferencia · precios Hámster/Puma/Manatí · textos legales · confirmar zonas (occidente y Chapinero/Galerías vs. "Calle 72 al norte") · dominio amizoovet (`SITE` en build.mjs).
+Fotos del equipo/animales e ilustración oficial de la mascota · Nequi/Daviplata/transferencia · precios Hámster/Puma/Manatí · textos legales · confirmar zonas (occidente y Chapinero/Galerías vs. "Calle 72 al norte") · dominio amizoovet (`SITE` en build.mjs).
 
 ## Estado
 - Fase 1 (sitio público) construida.

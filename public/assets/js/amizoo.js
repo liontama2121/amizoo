@@ -898,6 +898,37 @@
       decirA(seccion?.dataset.guia || 'Llena los datos y toca el botón amarillo.');
     });
 
+    // Contraseña: Amizoo se tapa los ojos con el ala; con "Ver" espía un poquito.
+    const dibujoA = nodo.querySelector('.acceso-ave__dibujo');
+    const todoA = dibujoA.querySelector('.ave-todo');
+    const cabezaA = dibujoA.querySelector('.ave-cabeza');
+    const alaA = dibujoA.querySelector('.ave-ala');
+    let tapado = false;
+    // El ala va detrás de la cabeza; para taparse los ojos pasa al frente.
+    const alFrente = (si) => { if (si) todoA.append(alaA); else todoA.insertBefore(alaA, cabezaA); };
+    const moverAla = (grados) => {
+      if (!animar) return;
+      A.remove(alaA);
+      A({ targets: alaA, rotate: grados, duration: 420, easing: grados ? 'easeOutBack' : 'easeOutQuad' });
+    };
+    const taparOjos = (t) => { tapado = true; alFrente(true); moverAla(-154); decirA(t); };
+    const espiar = () => { tapado = true; alFrente(true); moverAla(-120); decirA('Jeje, estoy espiando un poquito… 👀'); };
+    const destapar = () => {
+      if (!tapado) return;
+      tapado = false; moverAla(0);
+      setTimeout(() => { if (!tapado) alFrente(false); }, animar ? 300 : 0);
+    };
+    const quizasDestapar = () => setTimeout(() => { if (!cajaAcceso.querySelector('.campo-clave input:focus, [data-ver-clave]:focus')) destapar(); }, 80);
+    cajaAcceso.querySelectorAll('.campo-clave input').forEach((input) => {
+      input.addEventListener('focus', () => (input.type === 'text' ? espiar() : taparOjos('Escribe tu contraseña, yo no miro 🙈')));
+      input.addEventListener('blur', quizasDestapar);
+    });
+    cajaAcceso.querySelectorAll('[data-ver-clave]').forEach((b) => b.addEventListener('blur', quizasDestapar));
+    cajaAcceso.querySelectorAll('[data-ver-clave]').forEach((b) => b.addEventListener('click', () => setTimeout(() => {
+      const input = b.parentElement.querySelector('input');
+      if (input.type === 'text') espiar(); else taparOjos('Listo, ya no miro 🙈');
+    }, 0)));
+
     // Escena (en lugar de foto): el carro AmiZoo va andando y las mascotas saludan desde las ventanas
     const escena = seccion?.querySelector('.acceso__escena');
     if (escena) {
